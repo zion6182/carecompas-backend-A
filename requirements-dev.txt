@@ -1,0 +1,2 @@
+pytest>=8
+# 실제 AWS 연결 시에만 필요: boto3

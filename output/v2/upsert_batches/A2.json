@@ -1,0 +1,775 @@
+[
+  {
+    "records": [
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Patient/A2",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Patient",
+        "resourceId": "A2",
+        "patientKey": "A2",
+        "fhirStatus": null,
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Patient-A2.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Patient/A2",
+        "sourceSha256": "3838eae4feb93a548b4eb0c89aa7788427acf3083654e06b50736b118491e97b",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": null,
+        "occurredAt": null,
+        "datePrecision": "UNKNOWN",
+        "sourceDateValue": null,
+        "sourceDatePrecision": "UNKNOWN",
+        "dateEvidencePath": null,
+        "specialtyCode": "UNKNOWN",
+        "specialtySource": "UNKNOWN",
+        "specialtyEvidence": null,
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [],
+        "sharedReferences": [],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": []
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/A2-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "A2-01",
+        "patientKey": "A2",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-A2-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/A2-01",
+        "sourceSha256": "740fd6c9d71047f17680aebdbf5558af0f9b2568fc5b7e35b8863b62c330a8b2",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "감기 유사 증상으로 내원: 급성 바이러스 인두염",
+        "occurredAt": "2025-03-04T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-03-04T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.A2-01",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:A2.visits:A2-01; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTg4MSM1MSMkMiMkNCMkMDAkNDgxOTYxIzMxIyQxIyQzIyQ3MiQzNjEwMDIjNDEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-3fba894abfb9430e",
+        "organizationName": "가슴편한내과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/A2-condition-01",
+          "carecompass-demo-v1|Observation/A2-observation-01",
+          "carecompass-demo-v1|Patient/A2"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-3fba894abfb9430e-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-3fba894abfb9430e-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-3fba894abfb9430e",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-3fba894abfb9430e.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/A2",
+            "reference": "Patient/A2",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/A2-condition-01",
+            "reference": "Condition/A2-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/A2-condition-01",
+            "reference": "Condition/A2-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/A2-condition-01",
+            "reference": "Encounter/A2-01",
+            "path": "Condition.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/A2-observation-01",
+            "reference": "Encounter/A2-01",
+            "path": "Observation.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/A2-02",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "A2-02",
+        "patientKey": "A2",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-A2-02.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/A2-02",
+        "sourceSha256": "4b659b481c64e5d7bb3624f1160abad1bd9e357ce32e9101b7aa8ad22f1505c0",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "축구 중 부상으로 첫 진료",
+        "occurredAt": "2025-10-19T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-10-19T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "05",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.A2-02",
+          "sourceValue": "정형외과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:A2.visits:A2-02; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTg4MSM1MSMkMSMkMCMkODkkMzgxMzUxIzExIyQxIyQzIyQ3OSQzNjE4MzIjODEjJDEjJDYjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-391b71b4fd147a0f",
+        "organizationName": "서울대학교병원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/A2-condition-02",
+          "carecompass-demo-v1|Observation/A2-observation-02",
+          "carecompass-demo-v1|Patient/A2"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-391b71b4fd147a0f-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-391b71b4fd147a0f-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-391b71b4fd147a0f",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-391b71b4fd147a0f.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/A2",
+            "reference": "Patient/A2",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/A2-condition-02",
+            "reference": "Condition/A2-condition-02",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/A2-condition-02",
+            "reference": "Condition/A2-condition-02",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/A2-condition-02",
+            "reference": "Encounter/A2-02",
+            "path": "Condition.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/A2-observation-02",
+            "reference": "Encounter/A2-02",
+            "path": "Observation.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/A2-03",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "A2-03",
+        "patientKey": "A2",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-A2-03.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/A2-03",
+        "sourceSha256": "6643a4bf4ea6a356f09cbc6840c9fbf52b014e08534afed3f115683e241e8390",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "동일 부상에 대한 경과 확인 재진",
+        "occurredAt": "2025-11-09T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-11-09T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "05",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.A2-03",
+          "sourceValue": "정형외과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:A2.visits:A2-03; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTg4MSM1MSMkMiMkMCMkMDAkNDgxMTkxIzMxIyQxIyQzIyQ5OSQzNjEwMDIjNDEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-49004d29f7e4d167",
+        "organizationName": "가톨릭정형외과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/A2-condition-02",
+          "carecompass-demo-v1|Observation/A2-observation-03",
+          "carecompass-demo-v1|Patient/A2"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-49004d29f7e4d167-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-49004d29f7e4d167-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-49004d29f7e4d167",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-49004d29f7e4d167.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/A2",
+            "reference": "Patient/A2",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/A2-condition-02",
+            "reference": "Condition/A2-condition-02",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/A2-condition-02",
+            "reference": "Condition/A2-condition-02",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/A2-observation-03",
+            "reference": "Encounter/A2-03",
+            "path": "Observation.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/A2-04",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "A2-04",
+        "patientKey": "A2",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-A2-04.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/A2-04",
+        "sourceSha256": "ae66304d6fcdf2a7945acf894468ac38e16b8a0a13692125332b987dd42490e7",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "감기 유사 증상으로 내원: 급성 바이러스 인두염",
+        "occurredAt": "2026-07-08T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-07-08T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.A2-04",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:A2.visits:A2-04; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTg4MSM1MSMkMiMkNCMkMDAkNDgxOTYxIzMxIyQxIyQzIyQ3MiQzNjEwMDIjNDEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-3fba894abfb9430e",
+        "organizationName": "가슴편한내과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/A2-condition-03",
+          "carecompass-demo-v1|Observation/A2-observation-04",
+          "carecompass-demo-v1|Patient/A2"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-3fba894abfb9430e-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-3fba894abfb9430e-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-3fba894abfb9430e",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-3fba894abfb9430e.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/A2",
+            "reference": "Patient/A2",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/A2-condition-03",
+            "reference": "Condition/A2-condition-03",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/A2-condition-03",
+            "reference": "Condition/A2-condition-03",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/A2-condition-03",
+            "reference": "Encounter/A2-04",
+            "path": "Condition.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/A2-observation-04",
+            "reference": "Encounter/A2-04",
+            "path": "Observation.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Condition/A2-condition-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Condition",
+        "resourceId": "A2-condition-01",
+        "patientKey": "A2",
+        "fhirStatus": "resolved",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Condition-A2-condition-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Condition/A2-condition-01",
+        "sourceSha256": "6fdd4878cfe6807f4c1887e3f5ab78d59a5c812dd550b972c34aea1cadbb9431",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Acute viral pharyngitis (disorder)",
+        "occurredAt": "2025-03-04T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-03-04T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Condition.onsetDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.A2-01",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:A2.visits:A2-01; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/A2-01",
+          "carecompass-demo-v1|Patient/A2"
+        ],
+        "sharedReferences": [],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/A2",
+            "reference": "Patient/A2",
+            "path": "Condition.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/A2-01",
+            "reference": "Encounter/A2-01",
+            "path": "Condition.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Condition/A2-condition-02",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Condition",
+        "resourceId": "A2-condition-02",
+        "patientKey": "A2",
+        "fhirStatus": "resolved",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Condition-A2-condition-02.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Condition/A2-condition-02",
+        "sourceSha256": "75dc24edbfb6f22a83b7a43d39c18b9f938311dbeaef99f1eccbae8645aa9c63",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Fracture of ankle (disorder)",
+        "occurredAt": "2025-10-19T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-10-19T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Condition.onsetDateTime",
+        "specialtyCode": "05",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.A2-02",
+          "sourceValue": "정형외과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:A2.visits:A2-02; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/A2-02",
+          "carecompass-demo-v1|Patient/A2"
+        ],
+        "sharedReferences": [],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/A2",
+            "reference": "Patient/A2",
+            "path": "Condition.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/A2-02",
+            "reference": "Encounter/A2-02",
+            "path": "Condition.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Condition/A2-condition-03",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Condition",
+        "resourceId": "A2-condition-03",
+        "patientKey": "A2",
+        "fhirStatus": "resolved",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Condition-A2-condition-03.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Condition/A2-condition-03",
+        "sourceSha256": "6292266d9a2735e180b6adf1b674a1751307881a391e23b30040d6bfa623f73b",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Acute viral pharyngitis (disorder)",
+        "occurredAt": "2026-07-08T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-07-08T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Condition.onsetDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.A2-04",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:A2.visits:A2-04; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/A2-04",
+          "carecompass-demo-v1|Patient/A2"
+        ],
+        "sharedReferences": [],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/A2",
+            "reference": "Patient/A2",
+            "path": "Condition.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/A2-04",
+            "reference": "Encounter/A2-04",
+            "path": "Condition.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/A2-observation-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "A2-observation-01",
+        "patientKey": "A2",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-A2-observation-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/A2-observation-01",
+        "sourceSha256": "6f64a1e3c5783d6dff0cac406afc2e6a7402ca60494d2b662ca1f824a1768ba2",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Body temperature",
+        "occurredAt": "2025-03-04T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-03-04T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.A2-01",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:A2.visits:A2-01; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/A2-01",
+          "carecompass-demo-v1|Patient/A2"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-3fba894abfb9430e",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-3fba894abfb9430e.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/A2",
+            "reference": "Patient/A2",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/A2-01",
+            "reference": "Encounter/A2-01",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/A2-observation-02",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "A2-observation-02",
+        "patientKey": "A2",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-A2-observation-02.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/A2-observation-02",
+        "sourceSha256": "9cde2486a416b566954554ee669836910cc8c46b1d964c979ed74b1953472655",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+        "occurredAt": "2025-10-19T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-10-19T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "05",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.A2-02",
+          "sourceValue": "정형외과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:A2.visits:A2-02; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/A2-02",
+          "carecompass-demo-v1|Patient/A2"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-391b71b4fd147a0f",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-391b71b4fd147a0f.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/A2",
+            "reference": "Patient/A2",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/A2-02",
+            "reference": "Encounter/A2-02",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/A2-observation-03",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "A2-observation-03",
+        "patientKey": "A2",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-A2-observation-03.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/A2-observation-03",
+        "sourceSha256": "a9ee9e1a281bf6f84bcab7186a65ad250a21073ac82a6d53b45a4f45cc500fcb",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+        "occurredAt": "2025-11-09T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-11-09T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "05",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.A2-03",
+          "sourceValue": "정형외과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:A2.visits:A2-03; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/A2-03",
+          "carecompass-demo-v1|Patient/A2"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-49004d29f7e4d167",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-49004d29f7e4d167.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/A2",
+            "reference": "Patient/A2",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/A2-03",
+            "reference": "Encounter/A2-03",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/A2-observation-04",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "A2-observation-04",
+        "patientKey": "A2",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-A2-observation-04.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/A2-observation-04",
+        "sourceSha256": "289e7c843bf5ee0dea07020aa755a181f33eab73355d16a4f2ce6f0d153b4d9c",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Body temperature",
+        "occurredAt": "2026-07-08T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-07-08T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.A2-04",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:A2.visits:A2-04; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/A2-04",
+          "carecompass-demo-v1|Patient/A2"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-3fba894abfb9430e",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-3fba894abfb9430e.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/A2",
+            "reference": "Patient/A2",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/A2-04",
+            "reference": "Encounter/A2-04",
+            "path": "Observation.encounter"
+          }
+        ]
+      }
+    ],
+    "followups": []
+  }
+]

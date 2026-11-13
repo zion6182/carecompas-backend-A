@@ -1,0 +1,2007 @@
+[
+  {
+    "records": [
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Patient/C1",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Patient",
+        "resourceId": "C1",
+        "patientKey": "C1",
+        "fhirStatus": null,
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Patient-C1.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Patient/C1",
+        "sourceSha256": "9dfde0089ed1f67ebcdb7ee8bd2c960129196f20f59303623a3ecd81e2041e56",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": null,
+        "occurredAt": null,
+        "datePrecision": "UNKNOWN",
+        "sourceDateValue": null,
+        "sourceDatePrecision": "UNKNOWN",
+        "dateEvidencePath": null,
+        "specialtyCode": "UNKNOWN",
+        "specialtySource": "UNKNOWN",
+        "specialtyEvidence": null,
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [],
+        "sharedReferences": [],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": []
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/C1-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "C1-01",
+        "patientKey": "C1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-C1-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/C1-01",
+        "sourceSha256": "cbaa67f5ac53d47260e6c4dbeb75bd80c7519f2e962709b74f80a26b53c9fa41",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "제2형 당뇨병 정기 추적 진료 1회차",
+        "occurredAt": "2025-01-23T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-01-23T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-01",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-01; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxMzUxIzUxIyQxIyQxIyQxMyQ0NjE0ODEjNDEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+        "organizationName": "강남영내과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/C1-condition-01",
+          "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-01",
+          "carecompass-demo-v1|MedicationRequest/C1-medicationrequest-01",
+          "carecompass-demo-v1|Observation/C1-observation-01",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-243ee9c36e9a37f4-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-243ee9c36e9a37f4-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Encounter/C1-01",
+            "path": "Condition.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-01",
+            "reference": "Encounter/C1-01",
+            "path": "Observation.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|MedicationRequest/C1-medicationrequest-01",
+            "reference": "Encounter/C1-01",
+            "path": "MedicationRequest.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-01",
+            "reference": "Encounter/C1-01",
+            "path": "DiagnosticReport.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/C1-02",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "C1-02",
+        "patientKey": "C1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-C1-02.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/C1-02",
+        "sourceSha256": "d259f585ff233c3d4afba5b1786d08f51402872751474af242f8699e546f9a32",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "제2형 당뇨병 정기 추적 진료 2회차",
+        "occurredAt": "2025-03-20T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-03-20T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-02",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-02; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxMzUxIzUxIyQxIyQxIyQxMyQ0NjE0ODEjNDEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+        "organizationName": "강남영내과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/C1-condition-01",
+          "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-02",
+          "carecompass-demo-v1|Observation/C1-observation-02",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-243ee9c36e9a37f4-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-243ee9c36e9a37f4-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-02",
+            "reference": "Encounter/C1-02",
+            "path": "Observation.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-02",
+            "reference": "Encounter/C1-02",
+            "path": "DiagnosticReport.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/C1-03",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "C1-03",
+        "patientKey": "C1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-C1-03.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/C1-03",
+        "sourceSha256": "62a2a684997fc322548b200872e6619dfd7efc7aaa01b6915b220a508423522b",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "제2형 당뇨병 정기 추적 진료 3회차",
+        "occurredAt": "2025-06-19T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-06-19T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-03",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-03; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxMzUxIzUxIyQxIyQxIyQxMyQ0NjE0ODEjNDEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+        "organizationName": "강남영내과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/C1-condition-01",
+          "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-03",
+          "carecompass-demo-v1|Observation/C1-observation-03",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-243ee9c36e9a37f4-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-243ee9c36e9a37f4-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-03",
+            "reference": "Encounter/C1-03",
+            "path": "Observation.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-03",
+            "reference": "Encounter/C1-03",
+            "path": "DiagnosticReport.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/C1-04",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "C1-04",
+        "patientKey": "C1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-C1-04.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/C1-04",
+        "sourceSha256": "db50dc05b6127591f8422234c182950dfbc2a1e6b0272b6549bbb2b20b6b68b3",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "제2형 당뇨병 정기 추적 진료 4회차",
+        "occurredAt": "2025-09-18T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-09-18T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-04",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-04; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxMzUxIzUxIyQxIyQxIyQxMyQ0NjE0ODEjNDEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+        "organizationName": "강남영내과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/C1-condition-01",
+          "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-04",
+          "carecompass-demo-v1|Observation/C1-observation-04",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-243ee9c36e9a37f4-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-243ee9c36e9a37f4-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-04",
+            "reference": "Encounter/C1-04",
+            "path": "Observation.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-04",
+            "reference": "Encounter/C1-04",
+            "path": "DiagnosticReport.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/C1-05",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "C1-05",
+        "patientKey": "C1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-C1-05.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/C1-05",
+        "sourceSha256": "f0e8a2b801c699d11853748b66e41e853bb689300b920b8faebd70caa8810c49",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "제2형 당뇨병 정기 추적 진료 5회차",
+        "occurredAt": "2025-12-18T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-12-18T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-05",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-05; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxMzUxIzUxIyQxIyQxIyQxMyQ0NjE0ODEjNDEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+        "organizationName": "강남영내과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/C1-condition-01",
+          "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-05",
+          "carecompass-demo-v1|Observation/C1-observation-05",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-243ee9c36e9a37f4-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-243ee9c36e9a37f4-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-05",
+            "reference": "Encounter/C1-05",
+            "path": "Observation.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-05",
+            "reference": "Encounter/C1-05",
+            "path": "DiagnosticReport.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/C1-06",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "C1-06",
+        "patientKey": "C1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-C1-06.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/C1-06",
+        "sourceSha256": "69a5727ffa700d871e1e5b2176e0c92fda0a3eabc52ac16159f420d2ee73a785",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "제2형 당뇨병 정기 추적 진료 6회차",
+        "occurredAt": "2026-03-19T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-03-19T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-06",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-06; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxMzUxIzUxIyQxIyQxIyQxMyQ0NjE0ODEjNDEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+        "organizationName": "강남영내과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/C1-condition-01",
+          "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-06",
+          "carecompass-demo-v1|Observation/C1-observation-06",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-243ee9c36e9a37f4-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-243ee9c36e9a37f4-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-06",
+            "reference": "Encounter/C1-06",
+            "path": "Observation.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-06",
+            "reference": "Encounter/C1-06",
+            "path": "DiagnosticReport.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/C1-07",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "C1-07",
+        "patientKey": "C1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-C1-07.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/C1-07",
+        "sourceSha256": "2a5ab04a8fb07c29b0821bd2d1ad31834509511cdcc41638afe6c39038de08c5",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "제2형 당뇨병 정기 추적 진료 7회차",
+        "occurredAt": "2026-06-18T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-06-18T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-07",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-07; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxMzUxIzUxIyQxIyQxIyQxMyQ0NjE0ODEjNDEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+        "organizationName": "강남영내과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/C1-condition-01",
+          "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-07",
+          "carecompass-demo-v1|Observation/C1-observation-07",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-243ee9c36e9a37f4-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-243ee9c36e9a37f4-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-07",
+            "reference": "Encounter/C1-07",
+            "path": "Observation.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-07",
+            "reference": "Encounter/C1-07",
+            "path": "DiagnosticReport.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/C1-08",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "C1-08",
+        "patientKey": "C1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-C1-08.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/C1-08",
+        "sourceSha256": "d1a4fde3feb8c185afcf3adf81201da9f8f315ede7d90f07074514e3849e3c41",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "제2형 당뇨병 정기 추적 진료 8회차",
+        "occurredAt": "2026-09-17T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-09-17T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-08",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-08; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxMzUxIzUxIyQxIyQxIyQxMyQ0NjE0ODEjNDEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+        "organizationName": "강남영내과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|CarePlan/C1-careplan-01",
+          "carecompass-demo-v1|Condition/C1-condition-01",
+          "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-08",
+          "carecompass-demo-v1|Observation/C1-observation-08",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-243ee9c36e9a37f4-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-243ee9c36e9a37f4-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-08",
+            "reference": "Encounter/C1-08",
+            "path": "Observation.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-08",
+            "reference": "Encounter/C1-08",
+            "path": "DiagnosticReport.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|CarePlan/C1-careplan-01",
+            "reference": "Encounter/C1-08",
+            "path": "CarePlan.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Condition",
+        "resourceId": "C1-condition-01",
+        "patientKey": "C1",
+        "fhirStatus": "active",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Condition-C1-condition-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Condition/C1-condition-01",
+        "sourceSha256": "d00911d0526b2e80fe05d098a464d397f3c63d4e14676ad0a62434a081b1d026",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Diabetes mellitus type 2 (disorder)",
+        "occurredAt": "2025-01-23T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-01-23T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Condition.onsetDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-01",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-01; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-01",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Condition.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-01",
+            "reference": "Encounter/C1-01",
+            "path": "Condition.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/C1-observation-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "C1-observation-01",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-C1-observation-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/C1-observation-01",
+        "sourceSha256": "cf3ac1812332bc26fc05b79ecab8bc4fec9d33dd6237a64f521dd4b7fc640975",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2025-01-23T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-01-23T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-01",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-01; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-01",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-01",
+            "reference": "Encounter/C1-01",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/C1-observation-02",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "C1-observation-02",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-C1-observation-02.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/C1-observation-02",
+        "sourceSha256": "c602e5e0281c04d6563a762f4f5ef9147fb312460d39d9d870959b6d8a006839",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2025-03-20T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-03-20T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-02",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-02; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-02",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-02",
+            "reference": "Encounter/C1-02",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/C1-observation-03",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "C1-observation-03",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-C1-observation-03.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/C1-observation-03",
+        "sourceSha256": "a3b6952bb8f5588d31eacda2b8e6dd844f3b47096756dc0b6a9ac2aeaafe2592",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2025-06-19T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-06-19T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-03",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-03; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-03",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-03",
+            "reference": "Encounter/C1-03",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/C1-observation-04",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "C1-observation-04",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-C1-observation-04.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/C1-observation-04",
+        "sourceSha256": "42bbd523c36af18cf17db7cce586f850d2af763b286dfad0da87330953a2cf99",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2025-09-18T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-09-18T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-04",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-04; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-04",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-04",
+            "reference": "Encounter/C1-04",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/C1-observation-05",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "C1-observation-05",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-C1-observation-05.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/C1-observation-05",
+        "sourceSha256": "af01b124da052a95e88837f92ba5fc560be1fd884ec06987163650a193db9e07",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2025-12-18T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-12-18T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-05",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-05; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-05",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-05",
+            "reference": "Encounter/C1-05",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/C1-observation-06",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "C1-observation-06",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-C1-observation-06.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/C1-observation-06",
+        "sourceSha256": "ac27310440f19801d949af5436421f9022c7583555d6757c8bf34f4e0d001ea2",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2026-03-19T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-03-19T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-06",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-06; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-06",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-06",
+            "reference": "Encounter/C1-06",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/C1-observation-07",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "C1-observation-07",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-C1-observation-07.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/C1-observation-07",
+        "sourceSha256": "be992fe28e8d87faee409bc5cd4b2fb081fc3133c56533ac2bd57b8011cc40b2",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2026-06-18T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-06-18T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-07",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-07; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-07",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-07",
+            "reference": "Encounter/C1-07",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/C1-observation-08",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "C1-observation-08",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-C1-observation-08.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/C1-observation-08",
+        "sourceSha256": "682508601dd1ca65fcd9d634deeba45ccedb712eedc036545526deb75df4e1c0",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2026-09-17T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-09-17T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-08",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-08; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-08",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-08",
+            "reference": "Encounter/C1-08",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "DiagnosticReport",
+        "resourceId": "C1-diagnosticreport-01",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/DiagnosticReport-C1-diagnosticreport-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-01",
+        "sourceSha256": "2a15388129d90454037a42b093bef19d455b8e4cab5482b1b7de4b4c19da76c6",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2025-01-23T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-01-23T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "DiagnosticReport.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-01",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-01; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-01",
+          "carecompass-demo-v1|Observation/C1-observation-01",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "DiagnosticReport.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-01",
+            "reference": "Encounter/C1-01",
+            "path": "DiagnosticReport.encounter"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-01",
+            "reference": "Observation/C1-observation-01",
+            "path": "DiagnosticReport.result[0]"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-02",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "DiagnosticReport",
+        "resourceId": "C1-diagnosticreport-02",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/DiagnosticReport-C1-diagnosticreport-02.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-02",
+        "sourceSha256": "67c9a36773e1f92927210475b5b26b8134bf9d842f88d4f12f1c72cab47c34aa",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2025-03-20T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-03-20T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "DiagnosticReport.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-02",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-02; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-02",
+          "carecompass-demo-v1|Observation/C1-observation-02",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "DiagnosticReport.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-02",
+            "reference": "Encounter/C1-02",
+            "path": "DiagnosticReport.encounter"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-02",
+            "reference": "Observation/C1-observation-02",
+            "path": "DiagnosticReport.result[0]"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-03",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "DiagnosticReport",
+        "resourceId": "C1-diagnosticreport-03",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/DiagnosticReport-C1-diagnosticreport-03.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-03",
+        "sourceSha256": "ee62f0df5471cb6f23efa1b78a069ab1aa7305743cc4dd49763e640fd82535a4",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2025-06-19T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-06-19T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "DiagnosticReport.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-03",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-03; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-03",
+          "carecompass-demo-v1|Observation/C1-observation-03",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "DiagnosticReport.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-03",
+            "reference": "Encounter/C1-03",
+            "path": "DiagnosticReport.encounter"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-03",
+            "reference": "Observation/C1-observation-03",
+            "path": "DiagnosticReport.result[0]"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-04",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "DiagnosticReport",
+        "resourceId": "C1-diagnosticreport-04",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/DiagnosticReport-C1-diagnosticreport-04.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-04",
+        "sourceSha256": "3352ff526cb5b9c9e6b6fd59521bb373fb645068662d1b9bc4423711a054a43a",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2025-09-18T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-09-18T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "DiagnosticReport.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-04",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-04; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-04",
+          "carecompass-demo-v1|Observation/C1-observation-04",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "DiagnosticReport.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-04",
+            "reference": "Encounter/C1-04",
+            "path": "DiagnosticReport.encounter"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-04",
+            "reference": "Observation/C1-observation-04",
+            "path": "DiagnosticReport.result[0]"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-05",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "DiagnosticReport",
+        "resourceId": "C1-diagnosticreport-05",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/DiagnosticReport-C1-diagnosticreport-05.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-05",
+        "sourceSha256": "38face05fa41e6744050d2492d044fbdd29ee69798257d6163d4359fd008c3c7",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2025-12-18T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-12-18T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "DiagnosticReport.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-05",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-05; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-05",
+          "carecompass-demo-v1|Observation/C1-observation-05",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "DiagnosticReport.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-05",
+            "reference": "Encounter/C1-05",
+            "path": "DiagnosticReport.encounter"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-05",
+            "reference": "Observation/C1-observation-05",
+            "path": "DiagnosticReport.result[0]"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-06",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "DiagnosticReport",
+        "resourceId": "C1-diagnosticreport-06",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/DiagnosticReport-C1-diagnosticreport-06.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-06",
+        "sourceSha256": "f846278595c1fc5aa5c9bcd9cd4e57a6ae9add6fe302840b75914ca0f18a1a13",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2026-03-19T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-03-19T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "DiagnosticReport.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-06",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-06; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-06",
+          "carecompass-demo-v1|Observation/C1-observation-06",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "DiagnosticReport.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-06",
+            "reference": "Encounter/C1-06",
+            "path": "DiagnosticReport.encounter"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-06",
+            "reference": "Observation/C1-observation-06",
+            "path": "DiagnosticReport.result[0]"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-07",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "DiagnosticReport",
+        "resourceId": "C1-diagnosticreport-07",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/DiagnosticReport-C1-diagnosticreport-07.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-07",
+        "sourceSha256": "172bdcb93d3f2de8538ce239cd30b781609490ea1ffcd65fe452776bab59ed59",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2026-06-18T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-06-18T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "DiagnosticReport.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-07",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-07; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-07",
+          "carecompass-demo-v1|Observation/C1-observation-07",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "DiagnosticReport.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-07",
+            "reference": "Encounter/C1-07",
+            "path": "DiagnosticReport.encounter"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-07",
+            "reference": "Observation/C1-observation-07",
+            "path": "DiagnosticReport.result[0]"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|DiagnosticReport/C1-diagnosticreport-08",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "DiagnosticReport",
+        "resourceId": "C1-diagnosticreport-08",
+        "patientKey": "C1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/DiagnosticReport-C1-diagnosticreport-08.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-08",
+        "sourceSha256": "77fcf36e27cddae8dd8128878512454648d0c627444ee8c813d982408b2675f1",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "occurredAt": "2026-09-17T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-09-17T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "DiagnosticReport.effectiveDateTime",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-08",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-08; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/C1-08",
+          "carecompass-demo-v1|Observation/C1-observation-08",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "DiagnosticReport.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-08",
+            "reference": "Encounter/C1-08",
+            "path": "DiagnosticReport.encounter"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/C1-observation-08",
+            "reference": "Observation/C1-observation-08",
+            "path": "DiagnosticReport.result[0]"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|MedicationRequest/C1-medicationrequest-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "MedicationRequest",
+        "resourceId": "C1-medicationrequest-01",
+        "patientKey": "C1",
+        "fhirStatus": "active",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/MedicationRequest-C1-medicationrequest-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/MedicationRequest/C1-medicationrequest-01",
+        "sourceSha256": "807bb7b2e769c91abd04d7b8ad99e2ae4c30ac7863b0cc292b3ea51c4249c86e",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet",
+        "occurredAt": "2025-01-23T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-01-23T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "MedicationRequest.authoredOn",
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-01",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-01; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/C1-condition-01",
+          "carecompass-demo-v1|Encounter/C1-01",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-243ee9c36e9a37f4",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-243ee9c36e9a37f4.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "MedicationRequest.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-01",
+            "reference": "Encounter/C1-01",
+            "path": "MedicationRequest.encounter"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/C1-condition-01",
+            "reference": "Condition/C1-condition-01",
+            "path": "MedicationRequest.reasonReference[0]"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|CarePlan/C1-careplan-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "CarePlan",
+        "resourceId": "C1-careplan-01",
+        "patientKey": "C1",
+        "fhirStatus": "active",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/CarePlan-C1-careplan-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/CarePlan/C1-careplan-01",
+        "sourceSha256": "68d3444ba8aef38b7fb6812c4f3cf1ca65aa61d1db24011aab1378625f522e38",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "내과 후속 계획",
+        "occurredAt": null,
+        "datePrecision": "UNKNOWN",
+        "sourceDateValue": null,
+        "sourceDatePrecision": "UNKNOWN",
+        "dateEvidencePath": null,
+        "specialtyCode": "01",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.C1-08",
+          "sourceValue": "내과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:C1.visits:C1-08; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Appointment/C1-appointment-01",
+          "carecompass-demo-v1|Encounter/C1-08",
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "CarePlan.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/C1-08",
+            "reference": "Encounter/C1-08",
+            "path": "CarePlan.encounter"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Appointment/C1-appointment-01",
+            "reference": "Appointment/C1-appointment-01",
+            "path": "CarePlan.activity[0].reference"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Appointment/C1-appointment-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Appointment",
+        "resourceId": "C1-appointment-01",
+        "patientKey": "C1",
+        "fhirStatus": "booked",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Appointment-C1-appointment-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Appointment/C1-appointment-01",
+        "sourceSha256": "56e14cdb029f0203eccd5d07c0b5a03d9e30457297dcfce16c03045b738442b6",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "내과 추적 진료 예약",
+        "occurredAt": "2026-12-17T01:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-12-17T10:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Appointment.start",
+        "specialtyCode": "UNKNOWN",
+        "specialtySource": "UNKNOWN",
+        "specialtyEvidence": null,
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Patient/C1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-243ee9c36e9a37f4-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-243ee9c36e9a37f4-location.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/C1",
+            "reference": "Patient/C1",
+            "path": "Appointment.participant[0].actor"
+          }
+        ]
+      }
+    ],
+    "followups": [
+      {
+        "schemaVersion": 2,
+        "patientKey": "C1",
+        "followupKey": "e00da7fb1746c1c88067e0d3068c27662f40839a7b1d08ec6211d9b281779b12",
+        "kind": "APPOINTMENT",
+        "title": "내과 추적 진료 예약",
+        "sourceResourceKey": "carecompass-demo-v1|Appointment/C1-appointment-01",
+        "sourceElementKey": "$",
+        "relatedSourceResourceKeys": [
+          "carecompass-demo-v1|CarePlan/C1-careplan-01"
+        ],
+        "sourceStatus": "booked",
+        "activityStatus": null,
+        "scheduledAt": "2026-12-17T01:00:00Z",
+        "scheduledDate": null,
+        "datePrecision": "DATETIME",
+        "sourceDatePrecision": "DATETIME",
+        "timingEvidence": {
+          "path": "Appointment.start",
+          "originalValue": "2026-12-17T10:00:00+09:00"
+        },
+        "specialtyCode": "01",
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxMzUxIzUxIyQxIyQxIyQxMyQ0NjE0ODEjNDEjJDEjJDgjJDgz",
+        "isSynthetic": true
+      }
+    ]
+  }
+]

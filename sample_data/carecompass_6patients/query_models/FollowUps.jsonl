@@ -1,0 +1,4 @@
+{"patientKey":"A1","sourceResourceKeys":["carecompass-demo-v1|CarePlan/A1-careplan-01","carecompass-demo-v1|Appointment/A1-appointment-01"],"kind":"APPOINTMENT","status":"BOOKED","scheduledAt":"2026-11-12T01:00:00Z","datePrecision":"DATETIME","isSynthetic":true}
+{"patientKey":"B1","sourceResourceKeys":["carecompass-demo-v1|CarePlan/B1-careplan-01"],"kind":"PLAN","status":"DATE_UNDETERMINED","scheduledAt":null,"datePrecision":"UNKNOWN","isSynthetic":true}
+{"patientKey":"B1","sourceResourceKeys":["carecompass-demo-v1|Appointment/B1-appointment-01"],"kind":"APPOINTMENT","status":"CANCELLED","scheduledAt":"2026-10-29T01:00:00Z","datePrecision":"DATETIME","isSynthetic":true}
+{"patientKey":"C1","sourceResourceKeys":["carecompass-demo-v1|CarePlan/C1-careplan-01","carecompass-demo-v1|Appointment/C1-appointment-01"],"kind":"APPOINTMENT","status":"BOOKED","scheduledAt":"2026-12-17T01:00:00Z","datePrecision":"DATETIME","isSynthetic":true}

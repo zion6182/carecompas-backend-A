@@ -1,0 +1,868 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-B2",
+  "type": "collection",
+  "timestamp": "2026-10-30T23:59:59+09:00",
+  "entry": [
+    {
+      "fullUrl": "https://carecompass.example/fhir/Patient/B2",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "B2",
+        "identifier": [
+          {
+            "system": "https://carecompass.example/identifier/demo-patient",
+            "value": "B2"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "text": "가상환자 B2"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1999-12-22",
+        "address": [
+          {
+            "city": "춘천",
+            "country": "KR"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B2, Patient. 춘천 거주, 스팟 진료형</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/B2-01",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "B2-01",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185347001",
+                "display": "Encounter for problem (procedure)"
+              }
+            ],
+            "text": "내과 / 감기 유사 증상으로 내원: 급성 바이러스 인두염"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/B2"
+        },
+        "period": {
+          "start": "2025-02-17T09:00:00+09:00",
+          "end": "2025-02-17T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-5dd30caa32d8235e",
+          "display": "강남내과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-5dd30caa32d8235e-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/B2-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/B2-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B2, Encounter. 감기 유사 증상으로 내원: 급성 바이러스 인두염</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Condition/B2-condition-01",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "B2-condition-01",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "195662009",
+              "display": "Acute viral pharyngitis (disorder)"
+            }
+          ],
+          "text": "Acute viral pharyngitis (disorder)"
+        },
+        "subject": {
+          "reference": "Patient/B2"
+        },
+        "encounter": {
+          "reference": "Encounter/B2-01"
+        },
+        "onsetDateTime": "2025-02-17T09:00:00+09:00",
+        "abatementDateTime": "2025-02-24T09:00:00+09:00",
+        "recordedDate": "2025-02-17T09:00:00+09:00",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B2, Condition. 감기 유사 증상으로 내원: 급성 바이러스 인두염</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/B2-observation-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "B2-observation-01",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/B2"
+        },
+        "encounter": {
+          "reference": "Encounter/B2-01"
+        },
+        "effectiveDateTime": "2025-02-17T09:00:00+09:00",
+        "issued": "2025-02-17T09:00:00.764000+09:00",
+        "valueQuantity": {
+          "value": 37.8,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "performer": [
+          {
+            "reference": "Organization/hira-5dd30caa32d8235e"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B2, Observation. 감기 유사 증상으로 내원: 급성 바이러스 인두염</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/B2-02",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "B2-02",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "정형외과 / 축구 중 부상으로 첫 진료"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/B2"
+        },
+        "period": {
+          "start": "2025-08-31T09:00:00+09:00",
+          "end": "2025-08-31T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-7edf71100a918944",
+          "display": "강남리본정형외과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-7edf71100a918944-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/B2-condition-02"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/B2-condition-02"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B2, Encounter. 축구 중 부상으로 첫 진료</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Condition/B2-condition-02",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "B2-condition-02",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44465007",
+              "display": "Sprain of ankle (disorder)"
+            }
+          ],
+          "text": "Sprain of ankle (disorder)"
+        },
+        "subject": {
+          "reference": "Patient/B2"
+        },
+        "encounter": {
+          "reference": "Encounter/B2-02"
+        },
+        "onsetDateTime": "2025-08-31T09:00:00+09:00",
+        "abatementDateTime": "2025-10-26T09:00:00+09:00",
+        "recordedDate": "2025-08-31T09:00:00+09:00",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B2, Condition. 축구 중 부상으로 첫 진료</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/B2-observation-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "B2-observation-02",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72514-3",
+              "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+            }
+          ],
+          "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+        },
+        "subject": {
+          "reference": "Patient/B2"
+        },
+        "encounter": {
+          "reference": "Encounter/B2-02"
+        },
+        "effectiveDateTime": "2025-08-31T09:00:00+09:00",
+        "issued": "2025-08-31T09:00:00.764000+09:00",
+        "valueQuantity": {
+          "value": 7,
+          "unit": "점",
+          "system": "http://unitsofmeasure.org",
+          "code": "1"
+        },
+        "performer": [
+          {
+            "reference": "Organization/hira-7edf71100a918944"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B2, Observation. 축구 중 부상으로 첫 진료</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/B2-03",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "B2-03",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "정형외과 / 동일 부상에 대한 경과 확인 재진"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/B2"
+        },
+        "period": {
+          "start": "2025-09-14T09:00:00+09:00",
+          "end": "2025-09-14T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-7edf71100a918944",
+          "display": "강남리본정형외과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-7edf71100a918944-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/B2-condition-02"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/B2-condition-02"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B2, Encounter. 동일 부상에 대한 경과 확인 재진</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/B2-observation-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "B2-observation-03",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72514-3",
+              "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+            }
+          ],
+          "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+        },
+        "subject": {
+          "reference": "Patient/B2"
+        },
+        "encounter": {
+          "reference": "Encounter/B2-03"
+        },
+        "effectiveDateTime": "2025-09-14T09:00:00+09:00",
+        "issued": "2025-09-14T09:00:00.764000+09:00",
+        "valueQuantity": {
+          "value": 3,
+          "unit": "점",
+          "system": "http://unitsofmeasure.org",
+          "code": "1"
+        },
+        "performer": [
+          {
+            "reference": "Organization/hira-7edf71100a918944"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B2, Observation. 동일 부상에 대한 경과 확인 재진</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/B2-04",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "B2-04",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "내과 / 감기 유사 증상으로 내원: 급성 바이러스 인두염"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/B2"
+        },
+        "period": {
+          "start": "2026-09-05T09:00:00+09:00",
+          "end": "2026-09-05T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-5dd30caa32d8235e",
+          "display": "강남내과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-5dd30caa32d8235e-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/B2-condition-03"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/B2-condition-03"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B2, Encounter. 감기 유사 증상으로 내원: 급성 바이러스 인두염</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Condition/B2-condition-03",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "B2-condition-03",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "195662009",
+              "display": "Acute viral pharyngitis (disorder)"
+            }
+          ],
+          "text": "Acute viral pharyngitis (disorder)"
+        },
+        "subject": {
+          "reference": "Patient/B2"
+        },
+        "encounter": {
+          "reference": "Encounter/B2-04"
+        },
+        "onsetDateTime": "2026-09-05T09:00:00+09:00",
+        "abatementDateTime": "2026-09-12T09:00:00+09:00",
+        "recordedDate": "2026-09-05T09:00:00+09:00",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B2, Condition. 감기 유사 증상으로 내원: 급성 바이러스 인두염</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/B2-observation-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "B2-observation-04",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/B2"
+        },
+        "encounter": {
+          "reference": "Encounter/B2-04"
+        },
+        "effectiveDateTime": "2026-09-05T09:00:00+09:00",
+        "issued": "2026-09-05T09:00:00.764000+09:00",
+        "valueQuantity": {
+          "value": 37.5,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "performer": [
+          {
+            "reference": "Organization/hira-5dd30caa32d8235e"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B2, Observation. 감기 유사 증상으로 내원: 급성 바이러스 인두염</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Organization/hira-5dd30caa32d8235e",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "hira-5dd30caa32d8235e",
+        "identifier": [
+          {
+            "system": "https://carecompass.example/identifier/hira-clinic-key",
+            "value": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxMTkxIzIxIyQxIyQxIyQ5MiQyNjEyMjIjNDEjJDEjJDgjJDgz"
+          }
+        ],
+        "name": "강남내과의원",
+        "address": [
+          {
+            "text": "강원특별자치도 춘천시 춘천로 68, 3,4층 (효자동)",
+            "postalCode": "24366",
+            "country": "KR"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "033-242-8885",
+            "use": "work"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">강남내과의원; 강원특별자치도 춘천시 춘천로 68, 3,4층 (효자동); 제공된 HIRA 병원 데이터에서 변환. 이 기관과 합성 환자의 진료 연결은 가상이며 실제 진료·예약을 의미하지 않음.</div>"
+        },
+        "meta": {
+          "source": "https://www.data.go.kr/data/15051059/fileData.do"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Location/hira-5dd30caa32d8235e-location",
+      "resource": {
+        "resourceType": "Location",
+        "id": "hira-5dd30caa32d8235e-location",
+        "name": "강남내과의원",
+        "address": {
+          "text": "강원특별자치도 춘천시 춘천로 68, 3,4층 (효자동)",
+          "postalCode": "24366",
+          "country": "KR"
+        },
+        "managingOrganization": {
+          "reference": "Organization/hira-5dd30caa32d8235e"
+        },
+        "position": {
+          "longitude": 127.7250159,
+          "latitude": 37.8702921
+        },
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "033-242-8885",
+            "use": "work"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">강남내과의원; 강원특별자치도 춘천시 춘천로 68, 3,4층 (효자동); 제공된 HIRA 병원 데이터에서 변환. 이 기관과 합성 환자의 진료 연결은 가상이며 실제 진료·예약을 의미하지 않음.</div>"
+        },
+        "meta": {
+          "source": "https://www.data.go.kr/data/15051059/fileData.do"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Organization/hira-7edf71100a918944",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "hira-7edf71100a918944",
+        "identifier": [
+          {
+            "system": "https://carecompass.example/identifier/hira-clinic-key",
+            "value": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxMTkxIzExIyQxIyQzIyQwMyQ0NjEwMDIjNTEjJDEjJDIjJDgz"
+          }
+        ],
+        "name": "강남리본정형외과의원",
+        "address": [
+          {
+            "text": "강원특별자치도 춘천시 후석로 7, 1층 (석사동)",
+            "postalCode": "24378",
+            "country": "KR"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "033-263-7500",
+            "use": "work"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">강남리본정형외과의원; 강원특별자치도 춘천시 후석로 7, 1층 (석사동); 제공된 HIRA 병원 데이터에서 변환. 이 기관과 합성 환자의 진료 연결은 가상이며 실제 진료·예약을 의미하지 않음.</div>"
+        },
+        "meta": {
+          "source": "https://www.data.go.kr/data/15051059/fileData.do"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Location/hira-7edf71100a918944-location",
+      "resource": {
+        "resourceType": "Location",
+        "id": "hira-7edf71100a918944-location",
+        "name": "강남리본정형외과의원",
+        "address": {
+          "text": "강원특별자치도 춘천시 후석로 7, 1층 (석사동)",
+          "postalCode": "24378",
+          "country": "KR"
+        },
+        "managingOrganization": {
+          "reference": "Organization/hira-7edf71100a918944"
+        },
+        "position": {
+          "longitude": 127.7389389,
+          "latitude": 37.8563129
+        },
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "033-263-7500",
+            "use": "work"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">강남리본정형외과의원; 강원특별자치도 춘천시 후석로 7, 1층 (석사동); 제공된 HIRA 병원 데이터에서 변환. 이 기관과 합성 환자의 진료 연결은 가상이며 실제 진료·예약을 의미하지 않음.</div>"
+        },
+        "meta": {
+          "source": "https://www.data.go.kr/data/15051059/fileData.do"
+        }
+      }
+    }
+  ]
+}

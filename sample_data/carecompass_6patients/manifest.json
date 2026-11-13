@@ -1,0 +1,835 @@
+{
+  "schemaVersion": 1,
+  "fhirVersion": "4.0.1",
+  "datasetId": "carecompass-demo-v1",
+  "referenceDate": "2026-10-30",
+  "patientCount": 6,
+  "encounterCount": 36,
+  "resourceCount": 122,
+  "resourceTypeCounts": {
+    "Patient": 6,
+    "Encounter": 36,
+    "Condition": 12,
+    "Observation": 36,
+    "MedicationRequest": 1,
+    "DiagnosticReport": 8,
+    "Organization": 8,
+    "Location": 8,
+    "CodeSystem": 1,
+    "Appointment": 3,
+    "CarePlan": 3
+  },
+  "perPatient": {
+    "A1": {
+      "region": "서울",
+      "pattern": "REGULAR",
+      "encounters": 8,
+      "clinicalResources": 20
+    },
+    "A2": {
+      "region": "서울",
+      "pattern": "SPOT",
+      "encounters": 4,
+      "clinicalResources": 12
+    },
+    "B1": {
+      "region": "춘천",
+      "pattern": "REGULAR",
+      "encounters": 8,
+      "clinicalResources": 20
+    },
+    "B2": {
+      "region": "춘천",
+      "pattern": "SPOT",
+      "encounters": 4,
+      "clinicalResources": 12
+    },
+    "C1": {
+      "region": "원주",
+      "pattern": "REGULAR",
+      "encounters": 8,
+      "clinicalResources": 29
+    },
+    "C2": {
+      "region": "원주",
+      "pattern": "SPOT",
+      "encounters": 4,
+      "clinicalResources": 12
+    }
+  },
+  "generationMethod": "Synthea custom GMF 2.0 modules + deterministic Korean identity/provider/time normalization + standard FHIR Appointment/CarePlan fixtures",
+  "syntheaBuild": "bd8a52b",
+  "sourceClinicZip": {
+    "name": "carecompass_clinics_enriched_2026-10-30.zip",
+    "sha256": "86ea9531ef2cbebe364b43cd929318aaefa84407726c27e5fcbc2c8c717cf0a5"
+  },
+  "clinicalDataIsSynthetic": true,
+  "facilityMasterFactsAreSynthetic": false,
+  "actualProviderEndorsementOrAppointments": false,
+  "specialtyMapping": "Author-defined scenario -> source-reported HIRA specialty; DEMO_MAPPING, not inference from encounter class",
+  "fileCountNotResourceCount": "Patient bundles and all-patients bundle repeat the same unique resources; do not count these as additional visits",
+  "validation": {
+    "localIntegrity": "PASS",
+    "independentAudit": "PASS",
+    "reproductionFromArchivedSource": "BYTE_IDENTICAL",
+    "officialFHIR": {
+      "validator": "HL7 FHIR Validator 7.0.3",
+      "fhirVersion": "4.0.1",
+      "input": "fhir/all-patients.bundle.json",
+      "inputSha256": "703e7053b567e9068ed44b2c1990418cc41f127456c182cf981f874f869ef467",
+      "severityCounts": {
+        "warning": 34,
+        "information": 18
+      },
+      "passedNoErrors": true,
+      "terminologyServer": "disabled (-tx n/a)",
+      "limitation": "Structure and local definitions checked. No live SNOMED CT/LOINC/RxNorm terminology server validation or clinical validation."
+    }
+  },
+  "files": {
+    "fhir/all-patients.bundle.json": {
+      "bytes": 214549,
+      "sha256": "703e7053b567e9068ed44b2c1990418cc41f127456c182cf981f874f869ef467"
+    },
+    "fhir/bundles/A1.bundle.json": {
+      "bytes": 39623,
+      "sha256": "8dd72071122f68773e9345b77259972faec3eb30de2c97e8120eab54c8a65122"
+    },
+    "fhir/bundles/A2.bundle.json": {
+      "bytes": 30151,
+      "sha256": "69df85e01958ebc050c8df3b0448ff44878bd44b655e9e21d7d745d1c4832430"
+    },
+    "fhir/bundles/B1.bundle.json": {
+      "bytes": 40316,
+      "sha256": "ec3b03da1b10da237f1616f45517db9b09558d46f0d64a377df9c7506b094f39"
+    },
+    "fhir/bundles/B2.bundle.json": {
+      "bytes": 27463,
+      "sha256": "4587bfcf1d105b3dc1c93d68baf2421565e5c74f914069a98812c26e9d09f7da"
+    },
+    "fhir/bundles/C1.bundle.json": {
+      "bytes": 55538,
+      "sha256": "46d473643352793c191e01a7a4f397a4792a2601b8a167dba0870ccb11e2b6ba"
+    },
+    "fhir/bundles/C2.bundle.json": {
+      "bytes": 27553,
+      "sha256": "f1c6fe28966a6c446a4cd0820f27b9e9d5a89f7f241f2317fcf85bebfea24888"
+    },
+    "fhir/resources/Appointment-A1-appointment-01.json": {
+      "bytes": 939,
+      "sha256": "2bdf9fa0b8151fad97ce1e17325aee9ae231c1e19bd8a3ada5585f44f100e244"
+    },
+    "fhir/resources/Appointment-B1-appointment-01.json": {
+      "bytes": 1078,
+      "sha256": "4ccef3d6c940185b9caf21c5729191c363037489053021b09d67b3ac71272c41"
+    },
+    "fhir/resources/Appointment-C1-appointment-01.json": {
+      "bytes": 935,
+      "sha256": "56e14cdb029f0203eccd5d07c0b5a03d9e30457297dcfce16c03045b738442b6"
+    },
+    "fhir/resources/CarePlan-A1-careplan-01.json": {
+      "bytes": 849,
+      "sha256": "f7a4e4656ff196d0ec3c4620addd8b62fbedeb5286f7578f18afb9738371ac19"
+    },
+    "fhir/resources/CarePlan-B1-careplan-01.json": {
+      "bytes": 934,
+      "sha256": "795e517bdf2d0f0934f191a0fa65e83928d4a028c3a3a4b642b4b757bafe53b7"
+    },
+    "fhir/resources/CarePlan-C1-careplan-01.json": {
+      "bytes": 837,
+      "sha256": "68d3444ba8aef38b7fb6812c4f3cf1ca65aa61d1db24011aab1378625f522e38"
+    },
+    "fhir/resources/CodeSystem-demo-observations.json": {
+      "bytes": 1087,
+      "sha256": "812412b66334a415576fbc816a431caa73fa426a3ccd8fc08f8e27748108bae8"
+    },
+    "fhir/resources/Condition-A1-condition-01.json": {
+      "bytes": 1274,
+      "sha256": "aa077ead1cac6814960bd8746ffdcc0c1f4b44c6222603d79fb3f1015787b3e8"
+    },
+    "fhir/resources/Condition-A2-condition-01.json": {
+      "bytes": 1347,
+      "sha256": "6fdd4878cfe6807f4c1887e3f5ab78d59a5c812dd550b972c34aea1cadbb9431"
+    },
+    "fhir/resources/Condition-A2-condition-02.json": {
+      "bytes": 1304,
+      "sha256": "75dc24edbfb6f22a83b7a43d39c18b9f938311dbeaef99f1eccbae8645aa9c63"
+    },
+    "fhir/resources/Condition-A2-condition-03.json": {
+      "bytes": 1347,
+      "sha256": "6292266d9a2735e180b6adf1b674a1751307881a391e23b30040d6bfa623f73b"
+    },
+    "fhir/resources/Condition-B1-condition-01.json": {
+      "bytes": 1263,
+      "sha256": "68ab01a6513578869d6d9e35544a82f2b58ec674e3266d544e9854d56d654af6"
+    },
+    "fhir/resources/Condition-B2-condition-01.json": {
+      "bytes": 1347,
+      "sha256": "725ec1d3ee2797e83af3d67664a07b0ee405f382298f15e88b45c597151ede53"
+    },
+    "fhir/resources/Condition-B2-condition-02.json": {
+      "bytes": 1300,
+      "sha256": "be69d4c4abd6c9761e644b2be62035d5c89965171d793224296ba8095ef62cdc"
+    },
+    "fhir/resources/Condition-B2-condition-03.json": {
+      "bytes": 1347,
+      "sha256": "69dde250c191bcd844f2a244a534463055604c6eb8833742b92394af8103ef2b"
+    },
+    "fhir/resources/Condition-C1-condition-01.json": {
+      "bytes": 1275,
+      "sha256": "d00911d0526b2e80fe05d098a464d397f3c63d4e14676ad0a62434a081b1d026"
+    },
+    "fhir/resources/Condition-C2-condition-01.json": {
+      "bytes": 1347,
+      "sha256": "27ea0ca5fac0d96cb197285d5474260f1b9b79b32f969c10d336a9a2724366e3"
+    },
+    "fhir/resources/Condition-C2-condition-02.json": {
+      "bytes": 1300,
+      "sha256": "ace18dcb7c9701dafd611d4b116482da35eef778c0e80b626bce5dcf0eb264ff"
+    },
+    "fhir/resources/Condition-C2-condition-03.json": {
+      "bytes": 1347,
+      "sha256": "676dcbbf80c576f98f5bddb8b24418f805ba92278ee64e6674a16813c772620e"
+    },
+    "fhir/resources/DiagnosticReport-C1-diagnosticreport-01.json": {
+      "bytes": 1364,
+      "sha256": "2a15388129d90454037a42b093bef19d455b8e4cab5482b1b7de4b4c19da76c6"
+    },
+    "fhir/resources/DiagnosticReport-C1-diagnosticreport-02.json": {
+      "bytes": 1364,
+      "sha256": "67c9a36773e1f92927210475b5b26b8134bf9d842f88d4f12f1c72cab47c34aa"
+    },
+    "fhir/resources/DiagnosticReport-C1-diagnosticreport-03.json": {
+      "bytes": 1364,
+      "sha256": "ee62f0df5471cb6f23efa1b78a069ab1aa7305743cc4dd49763e640fd82535a4"
+    },
+    "fhir/resources/DiagnosticReport-C1-diagnosticreport-04.json": {
+      "bytes": 1364,
+      "sha256": "3352ff526cb5b9c9e6b6fd59521bb373fb645068662d1b9bc4423711a054a43a"
+    },
+    "fhir/resources/DiagnosticReport-C1-diagnosticreport-05.json": {
+      "bytes": 1364,
+      "sha256": "38face05fa41e6744050d2492d044fbdd29ee69798257d6163d4359fd008c3c7"
+    },
+    "fhir/resources/DiagnosticReport-C1-diagnosticreport-06.json": {
+      "bytes": 1364,
+      "sha256": "f846278595c1fc5aa5c9bcd9cd4e57a6ae9add6fe302840b75914ca0f18a1a13"
+    },
+    "fhir/resources/DiagnosticReport-C1-diagnosticreport-07.json": {
+      "bytes": 1364,
+      "sha256": "172bdcb93d3f2de8538ce239cd30b781609490ea1ffcd65fe452776bab59ed59"
+    },
+    "fhir/resources/DiagnosticReport-C1-diagnosticreport-08.json": {
+      "bytes": 1364,
+      "sha256": "77fcf36e27cddae8dd8128878512454648d0c627444ee8c813d982408b2675f1"
+    },
+    "fhir/resources/Encounter-A1-01.json": {
+      "bytes": 1545,
+      "sha256": "e7cf841958825915eec3d771c883a907c6bb41e4caeb5630813c2f07bcdbbc20"
+    },
+    "fhir/resources/Encounter-A1-02.json": {
+      "bytes": 1546,
+      "sha256": "b4b28e0b1a6b04510f7fec3cd9d00380526e7e9794520ec34f0e584b4012c386"
+    },
+    "fhir/resources/Encounter-A1-03.json": {
+      "bytes": 1546,
+      "sha256": "ee8cd4e43d3bfe20d2704274afc2136e212492adc826bb50dbd24df44ac8e9ac"
+    },
+    "fhir/resources/Encounter-A1-04.json": {
+      "bytes": 1546,
+      "sha256": "fe9af977f8752f1bc8412f7e39697c26dc6da927e319b760797b5685557bc961"
+    },
+    "fhir/resources/Encounter-A1-05.json": {
+      "bytes": 1546,
+      "sha256": "a87096ced7c5a44f0df4b59d84dae7f89695b56f66686cfebbea64ce6d25d784"
+    },
+    "fhir/resources/Encounter-A1-06.json": {
+      "bytes": 1546,
+      "sha256": "bfb13abcb6673bf52a93c6bf96b0c79c5533e39200daa0446c6118f8deb8ef02"
+    },
+    "fhir/resources/Encounter-A1-07.json": {
+      "bytes": 1546,
+      "sha256": "b8ace1d2a78a7f3cc0a720d684da78e948145b8028c7b1d7a4fc694f47d2519e"
+    },
+    "fhir/resources/Encounter-A1-08.json": {
+      "bytes": 1546,
+      "sha256": "d4362f4e1260d6b32868b1836c483238f608d443880e4973f2e1338072d9de7f"
+    },
+    "fhir/resources/Encounter-A2-01.json": {
+      "bytes": 1568,
+      "sha256": "740fd6c9d71047f17680aebdbf5558af0f9b2568fc5b7e35b8863b62c330a8b2"
+    },
+    "fhir/resources/Encounter-A2-02.json": {
+      "bytes": 1514,
+      "sha256": "4b659b481c64e5d7bb3624f1160abad1bd9e357ce32e9101b7aa8ad22f1505c0"
+    },
+    "fhir/resources/Encounter-A2-03.json": {
+      "bytes": 1538,
+      "sha256": "6643a4bf4ea6a356f09cbc6840c9fbf52b014e08534afed3f115683e241e8390"
+    },
+    "fhir/resources/Encounter-A2-04.json": {
+      "bytes": 1569,
+      "sha256": "ae66304d6fcdf2a7945acf894468ac38e16b8a0a13692125332b987dd42490e7"
+    },
+    "fhir/resources/Encounter-B1-01.json": {
+      "bytes": 1542,
+      "sha256": "ac31a38b1559729f14810a87a1bace91c7ad535a20112d62377239b217a518f6"
+    },
+    "fhir/resources/Encounter-B1-02.json": {
+      "bytes": 1543,
+      "sha256": "e07920dd52ad2be66bbb9407b0fef737d78d14cb2ef7e0718dc92d900d346e8f"
+    },
+    "fhir/resources/Encounter-B1-03.json": {
+      "bytes": 1543,
+      "sha256": "a20632a7272c1a24d3864391980b6257b10996d0573b24f22c4f6f0f29d82fa0"
+    },
+    "fhir/resources/Encounter-B1-04.json": {
+      "bytes": 1543,
+      "sha256": "e77dc4f6a45bf9cf221e34c152167cb879c7f41374444badd461d8207756e3ce"
+    },
+    "fhir/resources/Encounter-B1-05.json": {
+      "bytes": 1543,
+      "sha256": "441a7f7eeac847afe555e643e3cfe52ef2c4461e2d04f06dc3c476c71a59640d"
+    },
+    "fhir/resources/Encounter-B1-06.json": {
+      "bytes": 1543,
+      "sha256": "3e20722f97ac8ee420f15097952c4d9faed1c8d1002d1292dccf029f2c98349a"
+    },
+    "fhir/resources/Encounter-B1-07.json": {
+      "bytes": 1543,
+      "sha256": "1765d07d0e8fa03f58a6ffd58700dc8ab3a9ffb2f11b1d241115991993fb25a5"
+    },
+    "fhir/resources/Encounter-B1-08.json": {
+      "bytes": 1543,
+      "sha256": "2504009bcae5e29dca8976a08a854c78bd0a4e8e7bfaa782c0569d18e461003c"
+    },
+    "fhir/resources/Encounter-B2-01.json": {
+      "bytes": 1562,
+      "sha256": "e98e79879342c78e4ffe16ab966ad5b24bff8b06844525b03d81b37b6da83564"
+    },
+    "fhir/resources/Encounter-B2-02.json": {
+      "bytes": 1521,
+      "sha256": "2ca8f818bb84f688b11cc1ff48da5220149b33c551dd9024ae4e2344331e04a4"
+    },
+    "fhir/resources/Encounter-B2-03.json": {
+      "bytes": 1541,
+      "sha256": "28c2ec94d51dce8444cc6fdb16a37bff0e6fd9d056a788951111821476dcf269"
+    },
+    "fhir/resources/Encounter-B2-04.json": {
+      "bytes": 1563,
+      "sha256": "d4de70369f65ab616ffb70976f0a89391fe1ed7d44734c63e90a3b357df6d60b"
+    },
+    "fhir/resources/Encounter-C1-01.json": {
+      "bytes": 1529,
+      "sha256": "cbaa67f5ac53d47260e6c4dbeb75bd80c7519f2e962709b74f80a26b53c9fa41"
+    },
+    "fhir/resources/Encounter-C1-02.json": {
+      "bytes": 1530,
+      "sha256": "d259f585ff233c3d4afba5b1786d08f51402872751474af242f8699e546f9a32"
+    },
+    "fhir/resources/Encounter-C1-03.json": {
+      "bytes": 1530,
+      "sha256": "62a2a684997fc322548b200872e6619dfd7efc7aaa01b6915b220a508423522b"
+    },
+    "fhir/resources/Encounter-C1-04.json": {
+      "bytes": 1530,
+      "sha256": "db50dc05b6127591f8422234c182950dfbc2a1e6b0272b6549bbb2b20b6b68b3"
+    },
+    "fhir/resources/Encounter-C1-05.json": {
+      "bytes": 1530,
+      "sha256": "f0e8a2b801c699d11853748b66e41e853bb689300b920b8faebd70caa8810c49"
+    },
+    "fhir/resources/Encounter-C1-06.json": {
+      "bytes": 1530,
+      "sha256": "69a5727ffa700d871e1e5b2176e0c92fda0a3eabc52ac16159f420d2ee73a785"
+    },
+    "fhir/resources/Encounter-C1-07.json": {
+      "bytes": 1530,
+      "sha256": "2a5ab04a8fb07c29b0821bd2d1ad31834509511cdcc41638afe6c39038de08c5"
+    },
+    "fhir/resources/Encounter-C1-08.json": {
+      "bytes": 1530,
+      "sha256": "d1a4fde3feb8c185afcf3adf81201da9f8f315ede7d90f07074514e3849e3c41"
+    },
+    "fhir/resources/Encounter-C2-01.json": {
+      "bytes": 1565,
+      "sha256": "304bf5e479f2038a9afb730a4c377851baa11e138ff1a93122bfec78ba49e720"
+    },
+    "fhir/resources/Encounter-C2-02.json": {
+      "bytes": 1518,
+      "sha256": "5738712767841e2cb54834d8c55483f1d27a0a7a02e27ef0d482bc29532e4fa6"
+    },
+    "fhir/resources/Encounter-C2-03.json": {
+      "bytes": 1538,
+      "sha256": "868e7b3161229dc06a2096fbe1c01567d36b7e520d8870d9957ac861021fc7cc"
+    },
+    "fhir/resources/Encounter-C2-04.json": {
+      "bytes": 1566,
+      "sha256": "baaa491efb97a69cef57999d182101d8ce11e61c18279d9e295a96452ed9c989"
+    },
+    "fhir/resources/Location-hira-243ee9c36e9a37f4-location.json": {
+      "bytes": 988,
+      "sha256": "f5984d93b564ed60812ec861d1e56e00ddaf9bd98000acbe905ee84884ece861"
+    },
+    "fhir/resources/Location-hira-391b71b4fd147a0f-location.json": {
+      "bytes": 965,
+      "sha256": "9889683ce517814fe7ba4c009d92479d0f888a60fe15873cd1bdadcd0b99ff41"
+    },
+    "fhir/resources/Location-hira-3fba894abfb9430e-location.json": {
+      "bytes": 1018,
+      "sha256": "8ffb1b89e49286526b87b41ab49b49b13fcab256d523ec017c66ac0c6ebd3f41"
+    },
+    "fhir/resources/Location-hira-49004d29f7e4d167-location.json": {
+      "bytes": 1024,
+      "sha256": "4a166395a8b4924a907eac133b977a8adb521aa802c1227b11fd6db073a6a53e"
+    },
+    "fhir/resources/Location-hira-5dd30caa32d8235e-location.json": {
+      "bytes": 986,
+      "sha256": "004985f52302e3ccbeb53ed934cbc04774719742d81d6718122a4b7ac403db4a"
+    },
+    "fhir/resources/Location-hira-6b7e977fdf3855a1-location.json": {
+      "bytes": 1046,
+      "sha256": "3ec7d4bd176f4043c1ecebd40481893d14d83b0c64a46d8f04b7bf0cdb44dc01"
+    },
+    "fhir/resources/Location-hira-72706a77ff081181-location.json": {
+      "bytes": 1002,
+      "sha256": "027240d81f9ce0c01db02a0c3a24a66f223098fded94f95bb528ce01f76abe73"
+    },
+    "fhir/resources/Location-hira-7edf71100a918944-location.json": {
+      "bytes": 1004,
+      "sha256": "34eb66ecfb2ddb698535dfa6b42b7236a1789b2e261e0010aa8aa21dad74c1d4"
+    },
+    "fhir/resources/MedicationRequest-C1-medicationrequest-01.json": {
+      "bytes": 1399,
+      "sha256": "807bb7b2e769c91abd04d7b8ad99e2ae4c30ac7863b0cc292b3ea51c4249c86e"
+    },
+    "fhir/resources/Observation-A1-observation-01.json": {
+      "bytes": 1445,
+      "sha256": "08a90003b847ac45804e6111002274f53ba5bb2dcecfda573202ba9de2aa30bc"
+    },
+    "fhir/resources/Observation-A1-observation-02.json": {
+      "bytes": 1445,
+      "sha256": "2e0426ec0c9b4d224ea9936079c6c63d8179e53f4df56b8482e3f06ce10bc193"
+    },
+    "fhir/resources/Observation-A1-observation-03.json": {
+      "bytes": 1445,
+      "sha256": "048d34ef2e080374945a49a294349ad10642435e5b3fc3df358d74a63e6af00d"
+    },
+    "fhir/resources/Observation-A1-observation-04.json": {
+      "bytes": 1445,
+      "sha256": "5bdca1bb46f361f94e3a1eba5c42b61134695a18d39d718d8b418b95396c1a89"
+    },
+    "fhir/resources/Observation-A1-observation-05.json": {
+      "bytes": 1445,
+      "sha256": "f773bdc8eb35704f8017187514f70c62c2fb65765df4a4e9935634c3bf9e8fe3"
+    },
+    "fhir/resources/Observation-A1-observation-06.json": {
+      "bytes": 1445,
+      "sha256": "4d06e3d6370b297cf16b1bf03d5d95bec19cf91cdfce4905b327bc48b1481f5f"
+    },
+    "fhir/resources/Observation-A1-observation-07.json": {
+      "bytes": 1445,
+      "sha256": "c582afc4980246c3fef5b61436f58a22d01f471f83f1572702ddaf1b467fed57"
+    },
+    "fhir/resources/Observation-A1-observation-08.json": {
+      "bytes": 1445,
+      "sha256": "76bb0caaee787ab5b499018939ad62ae336a5bc143c5492e8ac117b8614c822a"
+    },
+    "fhir/resources/Observation-A2-observation-01.json": {
+      "bytes": 1378,
+      "sha256": "6f64a1e3c5783d6dff0cac406afc2e6a7402ca60494d2b662ca1f824a1768ba2"
+    },
+    "fhir/resources/Observation-A2-observation-02.json": {
+      "bytes": 1424,
+      "sha256": "9cde2486a416b566954554ee669836910cc8c46b1d964c979ed74b1953472655"
+    },
+    "fhir/resources/Observation-A2-observation-03.json": {
+      "bytes": 1434,
+      "sha256": "a9ee9e1a281bf6f84bcab7186a65ad250a21073ac82a6d53b45a4f45cc500fcb"
+    },
+    "fhir/resources/Observation-A2-observation-04.json": {
+      "bytes": 1378,
+      "sha256": "289e7c843bf5ee0dea07020aa755a181f33eab73355d16a4f2ce6f0d153b4d9c"
+    },
+    "fhir/resources/Observation-B1-observation-01.json": {
+      "bytes": 1370,
+      "sha256": "fb82195f293077eeaa851690801353b2aed91eb7bfa33721b48445d3d44d3f57"
+    },
+    "fhir/resources/Observation-B1-observation-02.json": {
+      "bytes": 1377,
+      "sha256": "c89c720b8010499aaec7a9616f4e7e73322c081f6f0815e6c9dd7056c5069dea"
+    },
+    "fhir/resources/Observation-B1-observation-03.json": {
+      "bytes": 1368,
+      "sha256": "2d9890faca8c11af0cbe0498c317f9c6ed98703790d7523ab7f293a93ddba975"
+    },
+    "fhir/resources/Observation-B1-observation-04.json": {
+      "bytes": 1364,
+      "sha256": "97f0430556d22c4bc69aed97e74806ae1a68579b2de27b5e78c53beb3b20e4dd"
+    },
+    "fhir/resources/Observation-B1-observation-05.json": {
+      "bytes": 1354,
+      "sha256": "154dc012e9cd16edf0cc66f4c4f79acf33b3d03a59f2be81daa583dd90481ac0"
+    },
+    "fhir/resources/Observation-B1-observation-06.json": {
+      "bytes": 1367,
+      "sha256": "f2ce2524f93f5b42b8d746fc7c26c856786ac797ebded8f75024b2dc84abb614"
+    },
+    "fhir/resources/Observation-B1-observation-07.json": {
+      "bytes": 1367,
+      "sha256": "840e79ebe08dab358cf902e3a53f2a295510a94b803089c67c2acb6e92a10455"
+    },
+    "fhir/resources/Observation-B1-observation-08.json": {
+      "bytes": 1354,
+      "sha256": "30954fe080ffab0574f52834a76cf9d65694cef935b307e36f7feff6cfb7c435"
+    },
+    "fhir/resources/Observation-B2-observation-01.json": {
+      "bytes": 1385,
+      "sha256": "adf6bbab8ecfd3784ede87cd6a45a2ea6c89a6ff7d5bdf1691e035a635afa866"
+    },
+    "fhir/resources/Observation-B2-observation-02.json": {
+      "bytes": 1431,
+      "sha256": "2f61fa29733fbeb1e35ab61ffa83ad397972e2089897445ad9cd7105cac32eac"
+    },
+    "fhir/resources/Observation-B2-observation-03.json": {
+      "bytes": 1441,
+      "sha256": "c15fefa326b08f4cbfc10001133373dcecaa3da1d01823028d414d907d9e9649"
+    },
+    "fhir/resources/Observation-B2-observation-04.json": {
+      "bytes": 1385,
+      "sha256": "270c9b12ba9bca8463fe56f6e016ea9b2748e229463dc1e5025679b22043ba6d"
+    },
+    "fhir/resources/Observation-C1-observation-01.json": {
+      "bytes": 1408,
+      "sha256": "cf3ac1812332bc26fc05b79ecab8bc4fec9d33dd6237a64f521dd4b7fc640975"
+    },
+    "fhir/resources/Observation-C1-observation-02.json": {
+      "bytes": 1408,
+      "sha256": "c602e5e0281c04d6563a762f4f5ef9147fb312460d39d9d870959b6d8a006839"
+    },
+    "fhir/resources/Observation-C1-observation-03.json": {
+      "bytes": 1408,
+      "sha256": "a3b6952bb8f5588d31eacda2b8e6dd844f3b47096756dc0b6a9ac2aeaafe2592"
+    },
+    "fhir/resources/Observation-C1-observation-04.json": {
+      "bytes": 1408,
+      "sha256": "42bbd523c36af18cf17db7cce586f850d2af763b286dfad0da87330953a2cf99"
+    },
+    "fhir/resources/Observation-C1-observation-05.json": {
+      "bytes": 1408,
+      "sha256": "af01b124da052a95e88837f92ba5fc560be1fd884ec06987163650a193db9e07"
+    },
+    "fhir/resources/Observation-C1-observation-06.json": {
+      "bytes": 1406,
+      "sha256": "ac27310440f19801d949af5436421f9022c7583555d6757c8bf34f4e0d001ea2"
+    },
+    "fhir/resources/Observation-C1-observation-07.json": {
+      "bytes": 1408,
+      "sha256": "be992fe28e8d87faee409bc5cd4b2fb081fc3133c56533ac2bd57b8011cc40b2"
+    },
+    "fhir/resources/Observation-C1-observation-08.json": {
+      "bytes": 1406,
+      "sha256": "682508601dd1ca65fcd9d634deeba45ccedb712eedc036545526deb75df4e1c0"
+    },
+    "fhir/resources/Observation-C2-observation-01.json": {
+      "bytes": 1385,
+      "sha256": "dfa37c06dc9a69ca0f5e452aba37273b062d699483e27560604d0a5082ddec29"
+    },
+    "fhir/resources/Observation-C2-observation-02.json": {
+      "bytes": 1431,
+      "sha256": "5330b57ff3c074eacf4f38194b69f3c119a8b19ce004e7271491351d64e0ff4d"
+    },
+    "fhir/resources/Observation-C2-observation-03.json": {
+      "bytes": 1441,
+      "sha256": "1a9d5ed2be2b96e6c857aca4a983d1db7f0f80435696d5080ff026da2e3c0f1e"
+    },
+    "fhir/resources/Observation-C2-observation-04.json": {
+      "bytes": 1385,
+      "sha256": "ccd992205daf5e490c1a4ba258c5d5f95046753155f2f295898f5dbd4fb69a57"
+    },
+    "fhir/resources/Organization-hira-243ee9c36e9a37f4.json": {
+      "bytes": 1049,
+      "sha256": "6ff735eaf2380108d6f242731bbddbb397c6eec7c71d1c136ee99723704e798e"
+    },
+    "fhir/resources/Organization-hira-391b71b4fd147a0f.json": {
+      "bytes": 1026,
+      "sha256": "fabeb5ecc9a9bb3348e38fcf286f931a3228dedb5ec74612162c56e0717df9a2"
+    },
+    "fhir/resources/Organization-hira-3fba894abfb9430e.json": {
+      "bytes": 1079,
+      "sha256": "68f9f4b81a52bed76067a4008198735a2ef1edf1ab073c0b11f90baf51d72780"
+    },
+    "fhir/resources/Organization-hira-49004d29f7e4d167.json": {
+      "bytes": 1085,
+      "sha256": "cc2c7c68a1ed16624cb1bc5530b33dede643872f611a148ce0b9dd4449666a81"
+    },
+    "fhir/resources/Organization-hira-5dd30caa32d8235e.json": {
+      "bytes": 1047,
+      "sha256": "77f19d8f49f8dcf04b1b4e90f253c7902c7c9bc81a3363f599fe7ee1c655bcd0"
+    },
+    "fhir/resources/Organization-hira-6b7e977fdf3855a1.json": {
+      "bytes": 1107,
+      "sha256": "74da20f9341f205eb319676222da03de1d4103ba725a4af1171b22079e86de54"
+    },
+    "fhir/resources/Organization-hira-72706a77ff081181.json": {
+      "bytes": 1065,
+      "sha256": "40b276639eee78722e4b8bb83ba1a48abf79b1e5cfc6ec761b947df6d70a1997"
+    },
+    "fhir/resources/Organization-hira-7edf71100a918944.json": {
+      "bytes": 1065,
+      "sha256": "32f04653d7d23c96404aca4b8f41924879db7f50eba334575e7671640649a6d2"
+    },
+    "fhir/resources/Patient-A1.json": {
+      "bytes": 804,
+      "sha256": "4b8320e28e823034e413eeaa34a2233f50f5b76a6a47df1dcfe7ea56ce6fdb06"
+    },
+    "fhir/resources/Patient-A2.json": {
+      "bytes": 802,
+      "sha256": "3838eae4feb93a548b4eb0c89aa7788427acf3083654e06b50736b118491e97b"
+    },
+    "fhir/resources/Patient-B1.json": {
+      "bytes": 804,
+      "sha256": "2e9ffba9ea0d7fbd7b0418f63efaa3cf442396be65e4eeb255491243eabea229"
+    },
+    "fhir/resources/Patient-B2.json": {
+      "bytes": 802,
+      "sha256": "31137359b174c2f0f947305cf63dc7acf1177526295fed32b9150938719d2b7c"
+    },
+    "fhir/resources/Patient-C1.json": {
+      "bytes": 802,
+      "sha256": "9dfde0089ed1f67ebcdb7ee8bd2c960129196f20f59303623a3ecd81e2041e56"
+    },
+    "fhir/resources/Patient-C2.json": {
+      "bytes": 804,
+      "sha256": "48a3e2da030bd05da054a88d7aba1f80e9ca44827f18120169f3ff9d8a1ae8f1"
+    },
+    "query_models/encounter_timeline.json": {
+      "bytes": 23455,
+      "sha256": "82d0c1909da2623ce23b3b6c48d616f248e1680a59f75efa429f8462bd083310"
+    },
+    "query_models/FollowUps.jsonl": {
+      "bytes": 946,
+      "sha256": "5406a925842674ef57bb69a033a6c558c7be0ff4d9b36b2e7a7f562b2d39acdc"
+    },
+    "query_models/Records.jsonl": {
+      "bytes": 65999,
+      "sha256": "2b7ee838fecb424cb807bc3e822fc0b2f6b21d2e709cffb00851b7d1fd0911bf"
+    },
+    "query_models/UserPatientLinks.demo.jsonl": {
+      "bytes": 870,
+      "sha256": "07c068fb87d116e4ad37e168ea23ca3f503ae1874004fcc177b9271f5371b859"
+    },
+    "README.txt": {
+      "bytes": 9804,
+      "sha256": "35e2cb04d83c50caba09f5b25ee2f484b0c90d587a6512a73380bff7a7acda5a"
+    },
+    "repro/bootstrap_tools.py": {
+      "bytes": 1374,
+      "sha256": "675820653ec494529c4792d1869d21c08c9de4498628d312d0f4a64cc21cc740"
+    },
+    "repro/build_package.py": {
+      "bytes": 23034,
+      "sha256": "bc374e498078acf4bcc89ebf5a7ef0fee3887afb95a3c4e38be24131fd1ae73a"
+    },
+    "repro/design_audit_sources.json": {
+      "bytes": 10142,
+      "sha256": "a90b084c3768e80e71cdb7f8d3b3247b34ea1a13bb8aab289f164f2d3b168bd7"
+    },
+    "repro/medication_source.json": {
+      "bytes": 259,
+      "sha256": "0674c6713658c50332b04a29fa62fea8b99070a276fa91e35ed4b8c93d04e509"
+    },
+    "repro/modules/carecompass_a1.json": {
+      "bytes": 12670,
+      "sha256": "c95809939a8c0ef3f33717808c7266eb742e21cbe6e6fe4451fa983d8d3177a6"
+    },
+    "repro/modules/carecompass_a2.json": {
+      "bytes": 8778,
+      "sha256": "c736d7022cd93fdddb7a2c96c872afd2c050d408369d58b08ab84e81b5d58120"
+    },
+    "repro/modules/carecompass_b1.json": {
+      "bytes": 13497,
+      "sha256": "75ebc779f0cd9f0b9176df5d23841034ef14deb9597ae6f6fe09dd162e905988"
+    },
+    "repro/modules/carecompass_b2.json": {
+      "bytes": 8776,
+      "sha256": "5600369c1b85160c110b6c9f736d3a0d4a4e9c036835e4a6aa46a243963364e2"
+    },
+    "repro/modules/carecompass_c1.json": {
+      "bytes": 15448,
+      "sha256": "f8391e411df56f8b54de7a04c97e298fd625da7203a1d34ae42959a2ea994d7d"
+    },
+    "repro/modules/carecompass_c2.json": {
+      "bytes": 8775,
+      "sha256": "f8c918e588c4985148b642d70c37f30391ce8316521305aadebfc81843652b07"
+    },
+    "repro/prepare_scenarios.py": {
+      "bytes": 9301,
+      "sha256": "dbed9afe36b9b134236d2c27bf1dddbd93a468f25ffd1b1102805333f05a3912"
+    },
+    "repro/raw/A1/command.json": {
+      "bytes": 1048,
+      "sha256": "a8cc34ac75d4fcff9cf44724536450889f95c79fa313d3509021203dbd181923"
+    },
+    "repro/raw/A1/engine.log": {
+      "bytes": 13487,
+      "sha256": "ce11d2bfd57fdb10e584d5f964118a9688882f23dd6e9e7aaa1ec9d88d8e5761"
+    },
+    "repro/raw/A1/fhir/original.bundle.json": {
+      "bytes": 35659,
+      "sha256": "04d38f6c7190408f78baa6ea87f45d83ff5152c6897b951ee40854d1e14eec0c"
+    },
+    "repro/raw/A2/command.json": {
+      "bytes": 1048,
+      "sha256": "d27a38606507ec8546c4bd193cf1f90af7c1b2f2a276085a8e58ed08bd0addb1"
+    },
+    "repro/raw/A2/engine.log": {
+      "bytes": 13475,
+      "sha256": "bc638af6b23b34f30b0e17197268e412a6333e56223a24e95b805e026de2dc4f"
+    },
+    "repro/raw/A2/fhir/original.bundle.json": {
+      "bytes": 25143,
+      "sha256": "ed1803e52fdf69384cef7009f7c67e146d44bb69a05de032d7e5d98ad17cabe2"
+    },
+    "repro/raw/B1/command.json": {
+      "bytes": 1048,
+      "sha256": "ebf8198af41cff08be69331766893ff7e867c44ad5e18d3f6e3f5fba89401f1d"
+    },
+    "repro/raw/B1/engine.log": {
+      "bytes": 13485,
+      "sha256": "181a158be6632100831bf925809d446016e45fd81dae25394c2d36febcdcd4dd"
+    },
+    "repro/raw/B1/fhir/original.bundle.json": {
+      "bytes": 31589,
+      "sha256": "a1f95590068d9ab5c9d232ad1f5127e90b7526ef4657251147a234445b100d6b"
+    },
+    "repro/raw/B2/command.json": {
+      "bytes": 1048,
+      "sha256": "2c538f4fc06005285e4484c86ec32858f8616f5fa6821b840b1b59758ea74267"
+    },
+    "repro/raw/B2/engine.log": {
+      "bytes": 13475,
+      "sha256": "c726e3cdfc18be60f559a015ccce4d4db81ab827299874846f47b58452358c8d"
+    },
+    "repro/raw/B2/fhir/original.bundle.json": {
+      "bytes": 23499,
+      "sha256": "1d32c3acd1c32490e97f4132af04f6c863b9e8a6cd9c4c46e10a3f6eeee4121d"
+    },
+    "repro/raw/C1/command.json": {
+      "bytes": 1048,
+      "sha256": "168d2b902e4c03a91b7afe01a86e8179cfa2b7db3f8d5a573e7ed2843cbfbba9"
+    },
+    "repro/raw/C1/engine.log": {
+      "bytes": 13477,
+      "sha256": "7d0e91c6366e8d278466784762d6f277f59d2d23de354d3eb3b4b4a17ff1089d"
+    },
+    "repro/raw/C1/fhir/original.bundle.json": {
+      "bytes": 45185,
+      "sha256": "edeaa70a7fda6e85e0f710825f77b01319abcf2033638ee08aafc9488559a787"
+    },
+    "repro/raw/C2/command.json": {
+      "bytes": 1048,
+      "sha256": "f2b0666b13afb8686256d3bd055aab2a2101beafc08dabfdccf642a310386b73"
+    },
+    "repro/raw/C2/engine.log": {
+      "bytes": 13491,
+      "sha256": "c88f895bb4013642b21509a3be992b6dd83eccc18c04e7873080cc64842763ef"
+    },
+    "repro/raw/C2/fhir/original.bundle.json": {
+      "bytes": 23697,
+      "sha256": "9865582773946814eff5d0d12a7f17c1333c182ab9fa25cf63fd30bbc29063a0"
+    },
+    "repro/run_engine.py": {
+      "bytes": 1225,
+      "sha256": "9e89f28e7704beab07e1bd8bb559443c7c22c1e3212f9846550a5b67d02ad0fb"
+    },
+    "repro/scenarios.json": {
+      "bytes": 23520,
+      "sha256": "403de6401cdf668d44b61fe33d5bd59e20038a5c92c1a8f21cdb9fc954051411"
+    },
+    "repro/selected_clinics.json": {
+      "bytes": 16723,
+      "sha256": "efd88b20351f8c3d810cd08eb516f7c2af611728ab773fc6a7d0505e2be7857e"
+    },
+    "repro/synthea-carecompass.properties": {
+      "bytes": 603,
+      "sha256": "8e4335e507527b06bda08bd289626e44ea2d1640b8bc900b8a70b71a5e30803f"
+    },
+    "repro/toolchain.json": {
+      "bytes": 1897,
+      "sha256": "af7d41d336221e6ccc40f1ccb213afac2af0a8252567ab82286ff9b54b58f9f6"
+    },
+    "repro/validator_metadata.json": {
+      "bytes": 3264,
+      "sha256": "23a8101c45d4b3a4407a07112ce867bfe94bf94ea70fea779957efda1414cfcf"
+    },
+    "source/generation_provenance.json": {
+      "bytes": 93605,
+      "sha256": "2065542f64786ecb1256061fe7a35f63a5d265a1fd9fff41c1e39055fc9c26a9"
+    },
+    "source/raw_synthea_A1.json": {
+      "bytes": 35659,
+      "sha256": "04d38f6c7190408f78baa6ea87f45d83ff5152c6897b951ee40854d1e14eec0c"
+    },
+    "source/raw_synthea_A2.json": {
+      "bytes": 25143,
+      "sha256": "ed1803e52fdf69384cef7009f7c67e146d44bb69a05de032d7e5d98ad17cabe2"
+    },
+    "source/raw_synthea_B1.json": {
+      "bytes": 31589,
+      "sha256": "a1f95590068d9ab5c9d232ad1f5127e90b7526ef4657251147a234445b100d6b"
+    },
+    "source/raw_synthea_B2.json": {
+      "bytes": 23499,
+      "sha256": "1d32c3acd1c32490e97f4132af04f6c863b9e8a6cd9c4c46e10a3f6eeee4121d"
+    },
+    "source/raw_synthea_C1.json": {
+      "bytes": 45185,
+      "sha256": "edeaa70a7fda6e85e0f710825f77b01319abcf2033638ee08aafc9488559a787"
+    },
+    "source/raw_synthea_C2.json": {
+      "bytes": 23697,
+      "sha256": "9865582773946814eff5d0d12a7f17c1333c182ab9fa25cf63fd30bbc29063a0"
+    },
+    "source/scenarios.json": {
+      "bytes": 23522,
+      "sha256": "a64325d7500b6f16d2e1dfe36152e3e017c717cbfae199940ce38fc73b78c5a0"
+    },
+    "source/selected_clinics.json": {
+      "bytes": 14411,
+      "sha256": "7d8200c56f760c6c5fa6792fea7be0fbd1e236de57629d0d97ca4dbada939af5"
+    },
+    "validation/independent_audit.json": {
+      "bytes": 5274,
+      "sha256": "9ba1d615b58f69bed728e17fdc8a6ceef20402009c6ccb0eec98ade6a1f8436b"
+    },
+    "validation/local_integrity_report.json": {
+      "bytes": 3023,
+      "sha256": "c507095259eb37daf5a17a00670d895eaf69797a8b332727d038af185837b6f7"
+    },
+    "validation/official_validator.json": {
+      "bytes": 77542,
+      "sha256": "34f6b7a55d588aa550697d5b6bf9c6863c411addee3493d5546cc981f7b7c3d0"
+    },
+    "validation/official_validator.log": {
+      "bytes": 2802,
+      "sha256": "009c6ea15c4efb8916739923d6f5b213cdcf7c448da11b80c482b2ea4b34eb68"
+    },
+    "validation/official_validator.metadata.json": {
+      "bytes": 4621,
+      "sha256": "1691dd27ca36b388e079a1faee9d5249d0551402ea8dbcc75649cfe44a540375"
+    },
+    "validation/reproduction_report.json": {
+      "bytes": 373,
+      "sha256": "c6c4fcd8115292908f6795a0ddcc804b538b8ac51d66110715f2900260c22851"
+    },
+    "validation/validation_summary.json": {
+      "bytes": 498,
+      "sha256": "ba1b4c37e5d62735b13e5b05d449da77b58e022f30ab259d690b55f9ff4fbe4f"
+    },
+    "시나리오_36회.txt": {
+      "bytes": 4155,
+      "sha256": "5af073903ad279b284f3564ed0c165b0368949cd846bd946fb6b3c1b84a6dc0f"
+    }
+  }
+}

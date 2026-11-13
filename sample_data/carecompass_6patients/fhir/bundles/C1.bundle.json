@@ -1,0 +1,1816 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-C1",
+  "type": "collection",
+  "timestamp": "2026-10-30T23:59:59+09:00",
+  "entry": [
+    {
+      "fullUrl": "https://carecompass.example/fhir/Patient/C1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "C1",
+        "identifier": [
+          {
+            "system": "https://carecompass.example/identifier/demo-patient",
+            "value": "C1"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "text": "가상환자 C1"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1972-10-14",
+        "address": [
+          {
+            "city": "원주",
+            "country": "KR"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Patient. 원주 거주, 정기 진료형</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/C1-01",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "C1-01",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185347001",
+                "display": "Encounter for problem (procedure)"
+              }
+            ],
+            "text": "내과 / 제2형 당뇨병 정기 추적 진료 1회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "period": {
+          "start": "2025-01-23T09:00:00+09:00",
+          "end": "2025-01-23T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-243ee9c36e9a37f4",
+          "display": "강남영내과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-243ee9c36e9a37f4-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/C1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/C1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Encounter. 제2형 당뇨병 정기 추적 진료 1회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Condition/C1-condition-01",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "C1-condition-01",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Diabetes mellitus type 2 (disorder)"
+            }
+          ],
+          "text": "Diabetes mellitus type 2 (disorder)"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-01"
+        },
+        "onsetDateTime": "2025-01-23T09:00:00+09:00",
+        "recordedDate": "2025-01-23T09:00:00+09:00",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Condition. 제2형 당뇨병 정기 추적 진료 1회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/C1-observation-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "C1-observation-01",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-01"
+        },
+        "effectiveDateTime": "2025-01-23T09:00:00+09:00",
+        "issued": "2025-01-23T09:00:00.785000+09:00",
+        "valueQuantity": {
+          "value": 7.8,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Observation. 제2형 당뇨병 정기 추적 진료 1회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/MedicationRequest/C1-medicationrequest-01",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "C1-medicationrequest-01",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "860975",
+              "display": "24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet"
+            }
+          ],
+          "text": "24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-01"
+        },
+        "authoredOn": "2025-01-23T09:00:00+09:00",
+        "requester": {
+          "reference": "Organization/hira-243ee9c36e9a37f4"
+        },
+        "reasonReference": [
+          {
+            "reference": "Condition/C1-condition-01"
+          }
+        ],
+        "note": [
+          {
+            "text": "합성 예시 처방. 약품 코드는 Synthea 기존 모듈에서 사용한 RxNorm 코드이며 복용량·횟수 지시는 생성하지 않음."
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, MedicationRequest. 제2형 당뇨병 정기 추적 진료 1회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-01",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "C1-diagnosticreport-01",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-01"
+        },
+        "effectiveDateTime": "2025-01-23T09:00:00+09:00",
+        "issued": "2025-01-23T09:00:00.785000+09:00",
+        "result": [
+          {
+            "reference": "Observation/C1-observation-01"
+          }
+        ],
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, DiagnosticReport. 제2형 당뇨병 정기 추적 진료 1회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/C1-02",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "C1-02",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "내과 / 제2형 당뇨병 정기 추적 진료 2회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "period": {
+          "start": "2025-03-20T09:00:00+09:00",
+          "end": "2025-03-20T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-243ee9c36e9a37f4",
+          "display": "강남영내과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-243ee9c36e9a37f4-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/C1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/C1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Encounter. 제2형 당뇨병 정기 추적 진료 2회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/C1-observation-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "C1-observation-02",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-02"
+        },
+        "effectiveDateTime": "2025-03-20T09:00:00+09:00",
+        "issued": "2025-03-20T09:00:00.785000+09:00",
+        "valueQuantity": {
+          "value": 7.6,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Observation. 제2형 당뇨병 정기 추적 진료 2회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-02",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "C1-diagnosticreport-02",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-02"
+        },
+        "effectiveDateTime": "2025-03-20T09:00:00+09:00",
+        "issued": "2025-03-20T09:00:00.785000+09:00",
+        "result": [
+          {
+            "reference": "Observation/C1-observation-02"
+          }
+        ],
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, DiagnosticReport. 제2형 당뇨병 정기 추적 진료 2회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/C1-03",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "C1-03",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "내과 / 제2형 당뇨병 정기 추적 진료 3회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "period": {
+          "start": "2025-06-19T09:00:00+09:00",
+          "end": "2025-06-19T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-243ee9c36e9a37f4",
+          "display": "강남영내과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-243ee9c36e9a37f4-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/C1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/C1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Encounter. 제2형 당뇨병 정기 추적 진료 3회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/C1-observation-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "C1-observation-03",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-03"
+        },
+        "effectiveDateTime": "2025-06-19T09:00:00+09:00",
+        "issued": "2025-06-19T09:00:00.785000+09:00",
+        "valueQuantity": {
+          "value": 7.3,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Observation. 제2형 당뇨병 정기 추적 진료 3회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-03",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "C1-diagnosticreport-03",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-03"
+        },
+        "effectiveDateTime": "2025-06-19T09:00:00+09:00",
+        "issued": "2025-06-19T09:00:00.785000+09:00",
+        "result": [
+          {
+            "reference": "Observation/C1-observation-03"
+          }
+        ],
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, DiagnosticReport. 제2형 당뇨병 정기 추적 진료 3회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/C1-04",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "C1-04",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "내과 / 제2형 당뇨병 정기 추적 진료 4회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "period": {
+          "start": "2025-09-18T09:00:00+09:00",
+          "end": "2025-09-18T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-243ee9c36e9a37f4",
+          "display": "강남영내과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-243ee9c36e9a37f4-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/C1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/C1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Encounter. 제2형 당뇨병 정기 추적 진료 4회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/C1-observation-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "C1-observation-04",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-04"
+        },
+        "effectiveDateTime": "2025-09-18T09:00:00+09:00",
+        "issued": "2025-09-18T09:00:00.785000+09:00",
+        "valueQuantity": {
+          "value": 7.1,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Observation. 제2형 당뇨병 정기 추적 진료 4회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-04",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "C1-diagnosticreport-04",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-04"
+        },
+        "effectiveDateTime": "2025-09-18T09:00:00+09:00",
+        "issued": "2025-09-18T09:00:00.785000+09:00",
+        "result": [
+          {
+            "reference": "Observation/C1-observation-04"
+          }
+        ],
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, DiagnosticReport. 제2형 당뇨병 정기 추적 진료 4회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/C1-05",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "C1-05",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "내과 / 제2형 당뇨병 정기 추적 진료 5회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "period": {
+          "start": "2025-12-18T09:00:00+09:00",
+          "end": "2025-12-18T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-243ee9c36e9a37f4",
+          "display": "강남영내과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-243ee9c36e9a37f4-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/C1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/C1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Encounter. 제2형 당뇨병 정기 추적 진료 5회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/C1-observation-05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "C1-observation-05",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-05"
+        },
+        "effectiveDateTime": "2025-12-18T09:00:00+09:00",
+        "issued": "2025-12-18T09:00:00.785000+09:00",
+        "valueQuantity": {
+          "value": 7.2,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Observation. 제2형 당뇨병 정기 추적 진료 5회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-05",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "C1-diagnosticreport-05",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-05"
+        },
+        "effectiveDateTime": "2025-12-18T09:00:00+09:00",
+        "issued": "2025-12-18T09:00:00.785000+09:00",
+        "result": [
+          {
+            "reference": "Observation/C1-observation-05"
+          }
+        ],
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, DiagnosticReport. 제2형 당뇨병 정기 추적 진료 5회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/C1-06",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "C1-06",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "내과 / 제2형 당뇨병 정기 추적 진료 6회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "period": {
+          "start": "2026-03-19T09:00:00+09:00",
+          "end": "2026-03-19T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-243ee9c36e9a37f4",
+          "display": "강남영내과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-243ee9c36e9a37f4-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/C1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/C1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Encounter. 제2형 당뇨병 정기 추적 진료 6회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/C1-observation-06",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "C1-observation-06",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-06"
+        },
+        "effectiveDateTime": "2026-03-19T09:00:00+09:00",
+        "issued": "2026-03-19T09:00:00.785000+09:00",
+        "valueQuantity": {
+          "value": 7,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Observation. 제2형 당뇨병 정기 추적 진료 6회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-06",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "C1-diagnosticreport-06",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-06"
+        },
+        "effectiveDateTime": "2026-03-19T09:00:00+09:00",
+        "issued": "2026-03-19T09:00:00.785000+09:00",
+        "result": [
+          {
+            "reference": "Observation/C1-observation-06"
+          }
+        ],
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, DiagnosticReport. 제2형 당뇨병 정기 추적 진료 6회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/C1-07",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "C1-07",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "내과 / 제2형 당뇨병 정기 추적 진료 7회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "period": {
+          "start": "2026-06-18T09:00:00+09:00",
+          "end": "2026-06-18T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-243ee9c36e9a37f4",
+          "display": "강남영내과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-243ee9c36e9a37f4-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/C1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/C1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Encounter. 제2형 당뇨병 정기 추적 진료 7회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/C1-observation-07",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "C1-observation-07",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-07"
+        },
+        "effectiveDateTime": "2026-06-18T09:00:00+09:00",
+        "issued": "2026-06-18T09:00:00.785000+09:00",
+        "valueQuantity": {
+          "value": 6.9,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Observation. 제2형 당뇨병 정기 추적 진료 7회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-07",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "C1-diagnosticreport-07",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-07"
+        },
+        "effectiveDateTime": "2026-06-18T09:00:00+09:00",
+        "issued": "2026-06-18T09:00:00.785000+09:00",
+        "result": [
+          {
+            "reference": "Observation/C1-observation-07"
+          }
+        ],
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, DiagnosticReport. 제2형 당뇨병 정기 추적 진료 7회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/C1-08",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "C1-08",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "내과 / 제2형 당뇨병 정기 추적 진료 8회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "period": {
+          "start": "2026-09-17T09:00:00+09:00",
+          "end": "2026-09-17T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-243ee9c36e9a37f4",
+          "display": "강남영내과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-243ee9c36e9a37f4-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/C1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/C1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Encounter. 제2형 당뇨병 정기 추적 진료 8회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/C1-observation-08",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "C1-observation-08",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-08"
+        },
+        "effectiveDateTime": "2026-09-17T09:00:00+09:00",
+        "issued": "2026-09-17T09:00:00.785000+09:00",
+        "valueQuantity": {
+          "value": 7,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, Observation. 제2형 당뇨병 정기 추적 진료 8회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/DiagnosticReport/C1-diagnosticreport-08",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "C1-diagnosticreport-08",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-08"
+        },
+        "effectiveDateTime": "2026-09-17T09:00:00+09:00",
+        "issued": "2026-09-17T09:00:00.785000+09:00",
+        "result": [
+          {
+            "reference": "Observation/C1-observation-08"
+          }
+        ],
+        "performer": [
+          {
+            "reference": "Organization/hira-243ee9c36e9a37f4"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. C1, DiagnosticReport. 제2형 당뇨병 정기 추적 진료 8회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Organization/hira-243ee9c36e9a37f4",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "hira-243ee9c36e9a37f4",
+        "identifier": [
+          {
+            "system": "https://carecompass.example/identifier/hira-clinic-key",
+            "value": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxMzUxIzUxIyQxIyQxIyQxMyQ0NjE0ODEjNDEjJDEjJDgjJDgz"
+          }
+        ],
+        "name": "강남영내과의원",
+        "address": [
+          {
+            "text": "강원특별자치도 원주시 행구로 39, 2층 (개운동)",
+            "postalCode": "26443",
+            "country": "KR"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "033-763-6390",
+            "use": "work"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">강남영내과의원; 강원특별자치도 원주시 행구로 39, 2층 (개운동); 제공된 HIRA 병원 데이터에서 변환. 이 기관과 합성 환자의 진료 연결은 가상이며 실제 진료·예약을 의미하지 않음.</div>"
+        },
+        "meta": {
+          "source": "https://www.data.go.kr/data/15051059/fileData.do"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Location/hira-243ee9c36e9a37f4-location",
+      "resource": {
+        "resourceType": "Location",
+        "id": "hira-243ee9c36e9a37f4-location",
+        "name": "강남영내과의원",
+        "address": {
+          "text": "강원특별자치도 원주시 행구로 39, 2층 (개운동)",
+          "postalCode": "26443",
+          "country": "KR"
+        },
+        "managingOrganization": {
+          "reference": "Organization/hira-243ee9c36e9a37f4"
+        },
+        "position": {
+          "longitude": 127.9601955,
+          "latitude": 37.3415848
+        },
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "033-763-6390",
+            "use": "work"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">강남영내과의원; 강원특별자치도 원주시 행구로 39, 2층 (개운동); 제공된 HIRA 병원 데이터에서 변환. 이 기관과 합성 환자의 진료 연결은 가상이며 실제 진료·예약을 의미하지 않음.</div>"
+        },
+        "meta": {
+          "source": "https://www.data.go.kr/data/15051059/fileData.do"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Appointment/C1-appointment-01",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "C1-appointment-01",
+        "status": "booked",
+        "description": "내과 추적 진료 예약",
+        "specialty": [
+          {
+            "text": "내과"
+          }
+        ],
+        "start": "2026-12-17T10:00:00+09:00",
+        "end": "2026-12-17T10:20:00+09:00",
+        "participant": [
+          {
+            "actor": {
+              "reference": "Patient/C1"
+            },
+            "status": "accepted"
+          },
+          {
+            "actor": {
+              "reference": "Location/hira-243ee9c36e9a37f4-location"
+            },
+            "status": "accepted"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. 내과 추적 진료 예약; 실제 예약이 아님.</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/CarePlan/C1-careplan-01",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "C1-careplan-01",
+        "status": "active",
+        "intent": "plan",
+        "title": "내과 후속 계획",
+        "subject": {
+          "reference": "Patient/C1"
+        },
+        "encounter": {
+          "reference": "Encounter/C1-08"
+        },
+        "description": "정기 추적 진료를 위한 합성 후속 계획.",
+        "activity": [
+          {
+            "reference": {
+              "reference": "Appointment/C1-appointment-01"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. 내과 후속 계획 — 합성 확정 예약 연결</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "https://carecompass.example/fhir/Patient/A1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "A1",
+        "identifier": [
+          {
+            "system": "https://carecompass.example/identifier/demo-patient",
+            "value": "A1"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "text": "가상환자 A1"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1968-07-27",
+        "address": [
+          {
+            "city": "서울",
+            "country": "KR"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. A1, Patient. 서울 거주, 정기 진료형</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Condition/A1-condition-01",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "A1-condition-01",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "239873007",
+              "display": "Osteoarthritis of knee (disorder)"
+            }
+          ],
+          "text": "Osteoarthritis of knee (disorder)"
+        },
+        "subject": {
+          "reference": "Patient/A1"
+        },
+        "encounter": {
+          "reference": "Encounter/A1-01"
+        },
+        "onsetDateTime": "2025-01-16T09:00:00+09:00",
+        "recordedDate": "2025-01-16T09:00:00+09:00",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. A1, Condition. 무릎 골관절염 정기 추적 진료 1회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/A1-08",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "A1-08",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "정형외과 / 무릎 골관절염 정기 추적 진료 8회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/A1"
+        },
+        "period": {
+          "start": "2026-10-15T09:00:00+09:00",
+          "end": "2026-10-15T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-49004d29f7e4d167",
+          "display": "가톨릭정형외과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-49004d29f7e4d167-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/A1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/A1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. A1, Encounter. 무릎 골관절염 정기 추적 진료 8회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/A1-observation-08",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "A1-observation-08",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72514-3",
+              "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+            }
+          ],
+          "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+        },
+        "subject": {
+          "reference": "Patient/A1"
+        },
+        "encounter": {
+          "reference": "Encounter/A1-08"
+        },
+        "effectiveDateTime": "2026-10-15T09:00:00+09:00",
+        "issued": "2026-10-15T09:00:00.339000+09:00",
+        "valueQuantity": {
+          "value": 3,
+          "unit": "점",
+          "system": "http://unitsofmeasure.org",
+          "code": "1"
+        },
+        "performer": [
+          {
+            "reference": "Organization/hira-49004d29f7e4d167"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. A1, Observation. 무릎 골관절염 정기 추적 진료 8회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Organization/hira-49004d29f7e4d167",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "hira-49004d29f7e4d167",
+        "identifier": [
+          {
+            "system": "https://carecompass.example/identifier/hira-clinic-key",
+            "value": "hira|JDQ4MTg4MSM1MSMkMiMkMCMkMDAkNDgxMTkxIzMxIyQxIyQzIyQ5OSQzNjEwMDIjNDEjJDEjJDgjJDgz"
+          }
+        ],
+        "name": "가톨릭정형외과의원",
+        "address": [
+          {
+            "text": "서울특별시 강남구 언주로 601, 파크랜드빌딩 3층 (논현동)",
+            "postalCode": "06109",
+            "country": "KR"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "554-7575",
+            "use": "work"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">가톨릭정형외과의원; 서울특별시 강남구 언주로 601, 파크랜드빌딩 3층 (논현동); 제공된 HIRA 병원 데이터에서 변환. 이 기관과 합성 환자의 진료 연결은 가상이며 실제 진료·예약을 의미하지 않음.</div>"
+        },
+        "meta": {
+          "source": "https://www.data.go.kr/data/15051059/fileData.do"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Location/hira-49004d29f7e4d167-location",
+      "resource": {
+        "resourceType": "Location",
+        "id": "hira-49004d29f7e4d167-location",
+        "name": "가톨릭정형외과의원",
+        "address": {
+          "text": "서울특별시 강남구 언주로 601, 파크랜드빌딩 3층 (논현동)",
+          "postalCode": "06109",
+          "country": "KR"
+        },
+        "managingOrganization": {
+          "reference": "Organization/hira-49004d29f7e4d167"
+        },
+        "position": {
+          "longitude": 127.0377994,
+          "latitude": 37.5088657
+        },
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "554-7575",
+            "use": "work"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">가톨릭정형외과의원; 서울특별시 강남구 언주로 601, 파크랜드빌딩 3층 (논현동); 제공된 HIRA 병원 데이터에서 변환. 이 기관과 합성 환자의 진료 연결은 가상이며 실제 진료·예약을 의미하지 않음.</div>"
+        },
+        "meta": {
+          "source": "https://www.data.go.kr/data/15051059/fileData.do"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Appointment/A1-appointment-01",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "A1-appointment-01",
+        "status": "booked",
+        "description": "정형외과 재진 예약",
+        "specialty": [
+          {
+            "text": "정형외과"
+          }
+        ],
+        "start": "2026-11-12T10:00:00+09:00",
+        "end": "2026-11-12T10:20:00+09:00",
+        "participant": [
+          {
+            "actor": {
+              "reference": "Patient/A1"
+            },
+            "status": "accepted"
+          },
+          {
+            "actor": {
+              "reference": "Location/hira-49004d29f7e4d167-location"
+            },
+            "status": "accepted"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. 정형외과 재진 예약; 실제 예약이 아님.</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/CarePlan/A1-careplan-01",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "A1-careplan-01",
+        "status": "active",
+        "intent": "plan",
+        "title": "정형외과 후속 계획",
+        "subject": {
+          "reference": "Patient/A1"
+        },
+        "encounter": {
+          "reference": "Encounter/A1-08"
+        },
+        "description": "정기 추적 진료를 위한 합성 후속 계획.",
+        "activity": [
+          {
+            "reference": {
+              "reference": "Appointment/A1-appointment-01"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. 정형외과 후속 계획 — 합성 확정 예약 연결</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

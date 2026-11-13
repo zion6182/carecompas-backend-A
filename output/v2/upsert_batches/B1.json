@@ -1,0 +1,1362 @@
+[
+  {
+    "records": [
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Patient/B1",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Patient",
+        "resourceId": "B1",
+        "patientKey": "B1",
+        "fhirStatus": null,
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Patient-B1.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Patient/B1",
+        "sourceSha256": "2e9ffba9ea0d7fbd7b0418f63efaa3cf442396be65e4eeb255491243eabea229",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": null,
+        "occurredAt": null,
+        "datePrecision": "UNKNOWN",
+        "sourceDateValue": null,
+        "sourceDatePrecision": "UNKNOWN",
+        "dateEvidencePath": null,
+        "specialtyCode": "UNKNOWN",
+        "specialtySource": "UNKNOWN",
+        "specialtyEvidence": null,
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [],
+        "sharedReferences": [],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": []
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/B1-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "B1-01",
+        "patientKey": "B1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-B1-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/B1-01",
+        "sourceSha256": "ac31a38b1559729f14810a87a1bace91c7ad535a20112d62377239b217a518f6",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "아토피 피부염 정기 추적 진료 1회차",
+        "occurredAt": "2025-02-06T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-02-06T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-01",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-01; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxOTYxIzUxIyQxIyQ1IyQ5OSQyNjE0ODEjNzEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+        "organizationName": "아름다운피부과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/B1-condition-01",
+          "carecompass-demo-v1|Observation/B1-observation-01",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-72706a77ff081181-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-72706a77ff081181-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Encounter/B1-01",
+            "path": "Condition.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/B1-observation-01",
+            "reference": "Encounter/B1-01",
+            "path": "Observation.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/B1-02",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "B1-02",
+        "patientKey": "B1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-B1-02.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/B1-02",
+        "sourceSha256": "e07920dd52ad2be66bbb9407b0fef737d78d14cb2ef7e0718dc92d900d346e8f",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "아토피 피부염 정기 추적 진료 2회차",
+        "occurredAt": "2025-03-06T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-03-06T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-02",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-02; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxOTYxIzUxIyQxIyQ1IyQ5OSQyNjE0ODEjNzEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+        "organizationName": "아름다운피부과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/B1-condition-01",
+          "carecompass-demo-v1|Observation/B1-observation-02",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-72706a77ff081181-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-72706a77ff081181-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/B1-observation-02",
+            "reference": "Encounter/B1-02",
+            "path": "Observation.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/B1-03",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "B1-03",
+        "patientKey": "B1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-B1-03.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/B1-03",
+        "sourceSha256": "a20632a7272c1a24d3864391980b6257b10996d0573b24f22c4f6f0f29d82fa0",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "아토피 피부염 정기 추적 진료 3회차",
+        "occurredAt": "2025-05-08T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-05-08T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-03",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-03; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxOTYxIzUxIyQxIyQ1IyQ5OSQyNjE0ODEjNzEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+        "organizationName": "아름다운피부과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/B1-condition-01",
+          "carecompass-demo-v1|Observation/B1-observation-03",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-72706a77ff081181-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-72706a77ff081181-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/B1-observation-03",
+            "reference": "Encounter/B1-03",
+            "path": "Observation.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/B1-04",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "B1-04",
+        "patientKey": "B1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-B1-04.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/B1-04",
+        "sourceSha256": "e77dc4f6a45bf9cf221e34c152167cb879c7f41374444badd461d8207756e3ce",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "아토피 피부염 정기 추적 진료 4회차",
+        "occurredAt": "2025-08-07T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-08-07T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-04",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-04; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxOTYxIzUxIyQxIyQ1IyQ5OSQyNjE0ODEjNzEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+        "organizationName": "아름다운피부과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/B1-condition-01",
+          "carecompass-demo-v1|Observation/B1-observation-04",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-72706a77ff081181-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-72706a77ff081181-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/B1-observation-04",
+            "reference": "Encounter/B1-04",
+            "path": "Observation.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/B1-05",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "B1-05",
+        "patientKey": "B1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-B1-05.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/B1-05",
+        "sourceSha256": "441a7f7eeac847afe555e643e3cfe52ef2c4461e2d04f06dc3c476c71a59640d",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "아토피 피부염 정기 추적 진료 5회차",
+        "occurredAt": "2025-11-06T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-11-06T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-05",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-05; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxOTYxIzUxIyQxIyQ1IyQ5OSQyNjE0ODEjNzEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+        "organizationName": "아름다운피부과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/B1-condition-01",
+          "carecompass-demo-v1|Observation/B1-observation-05",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-72706a77ff081181-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-72706a77ff081181-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/B1-observation-05",
+            "reference": "Encounter/B1-05",
+            "path": "Observation.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/B1-06",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "B1-06",
+        "patientKey": "B1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-B1-06.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/B1-06",
+        "sourceSha256": "3e20722f97ac8ee420f15097952c4d9faed1c8d1002d1292dccf029f2c98349a",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "아토피 피부염 정기 추적 진료 6회차",
+        "occurredAt": "2026-02-05T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-02-05T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-06",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-06; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxOTYxIzUxIyQxIyQ1IyQ5OSQyNjE0ODEjNzEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+        "organizationName": "아름다운피부과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/B1-condition-01",
+          "carecompass-demo-v1|Observation/B1-observation-06",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-72706a77ff081181-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-72706a77ff081181-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/B1-observation-06",
+            "reference": "Encounter/B1-06",
+            "path": "Observation.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/B1-07",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "B1-07",
+        "patientKey": "B1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-B1-07.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/B1-07",
+        "sourceSha256": "1765d07d0e8fa03f58a6ffd58700dc8ab3a9ffb2f11b1d241115991993fb25a5",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "아토피 피부염 정기 추적 진료 7회차",
+        "occurredAt": "2026-06-04T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-06-04T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-07",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-07; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxOTYxIzUxIyQxIyQ1IyQ5OSQyNjE0ODEjNzEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+        "organizationName": "아름다운피부과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Condition/B1-condition-01",
+          "carecompass-demo-v1|Observation/B1-observation-07",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-72706a77ff081181-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-72706a77ff081181-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/B1-observation-07",
+            "reference": "Encounter/B1-07",
+            "path": "Observation.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Encounter/B1-08",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Encounter",
+        "resourceId": "B1-08",
+        "patientKey": "B1",
+        "fhirStatus": "finished",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Encounter-B1-08.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Encounter/B1-08",
+        "sourceSha256": "2504009bcae5e29dca8976a08a854c78bd0a4e8e7bfaa782c0569d18e461003c",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "아토피 피부염 정기 추적 진료 8회차",
+        "occurredAt": "2026-10-08T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-10-08T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Encounter.period.start",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-08",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-08; clinic source reports matching specialty"
+        },
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxOTYxIzUxIyQxIyQ1IyQ5OSQyNjE0ODEjNzEjJDEjJDgjJDgz",
+        "organizationResourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+        "organizationName": "아름다운피부과의원",
+        "organizationNameSource": "FHIR",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|CarePlan/B1-careplan-01",
+          "carecompass-demo-v1|Condition/B1-condition-01",
+          "carecompass-demo-v1|Observation/B1-observation-08",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-72706a77ff081181-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-72706a77ff081181-location.json"
+          },
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Encounter.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.diagnosis[0].condition"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+            "reference": "Condition/B1-condition-01",
+            "path": "Encounter.reasonReference[0]"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Observation/B1-observation-08",
+            "reference": "Encounter/B1-08",
+            "path": "Observation.encounter (reverse)"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|CarePlan/B1-careplan-01",
+            "reference": "Encounter/B1-08",
+            "path": "CarePlan.encounter (reverse)"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Condition/B1-condition-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Condition",
+        "resourceId": "B1-condition-01",
+        "patientKey": "B1",
+        "fhirStatus": "active",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Condition-B1-condition-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Condition/B1-condition-01",
+        "sourceSha256": "68ab01a6513578869d6d9e35544a82f2b58ec674e3266d544e9854d56d654af6",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Atopic dermatitis (disorder)",
+        "occurredAt": "2025-02-06T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-02-06T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Condition.onsetDateTime",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-01",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-01; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/B1-01",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Condition.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/B1-01",
+            "reference": "Encounter/B1-01",
+            "path": "Condition.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/B1-observation-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "B1-observation-01",
+        "patientKey": "B1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-B1-observation-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/B1-observation-01",
+        "sourceSha256": "fb82195f293077eeaa851690801353b2aed91eb7bfa33721b48445d3d44d3f57",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Skin symptom course (synthetic narrative)",
+        "occurredAt": "2025-02-06T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-02-06T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-01",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-01; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/B1-01",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/B1-01",
+            "reference": "Encounter/B1-01",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/B1-observation-02",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "B1-observation-02",
+        "patientKey": "B1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-B1-observation-02.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/B1-observation-02",
+        "sourceSha256": "c89c720b8010499aaec7a9616f4e7e73322c081f6f0815e6c9dd7056c5069dea",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Skin symptom course (synthetic narrative)",
+        "occurredAt": "2025-03-06T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-03-06T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-02",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-02; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/B1-02",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/B1-02",
+            "reference": "Encounter/B1-02",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/B1-observation-03",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "B1-observation-03",
+        "patientKey": "B1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-B1-observation-03.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/B1-observation-03",
+        "sourceSha256": "2d9890faca8c11af0cbe0498c317f9c6ed98703790d7523ab7f293a93ddba975",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Skin symptom course (synthetic narrative)",
+        "occurredAt": "2025-05-08T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-05-08T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-03",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-03; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/B1-03",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/B1-03",
+            "reference": "Encounter/B1-03",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/B1-observation-04",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "B1-observation-04",
+        "patientKey": "B1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-B1-observation-04.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/B1-observation-04",
+        "sourceSha256": "97f0430556d22c4bc69aed97e74806ae1a68579b2de27b5e78c53beb3b20e4dd",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Skin symptom course (synthetic narrative)",
+        "occurredAt": "2025-08-07T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-08-07T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-04",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-04; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/B1-04",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/B1-04",
+            "reference": "Encounter/B1-04",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/B1-observation-05",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "B1-observation-05",
+        "patientKey": "B1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-B1-observation-05.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/B1-observation-05",
+        "sourceSha256": "154dc012e9cd16edf0cc66f4c4f79acf33b3d03a59f2be81daa583dd90481ac0",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Skin symptom course (synthetic narrative)",
+        "occurredAt": "2025-11-06T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2025-11-06T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-05",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-05; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/B1-05",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/B1-05",
+            "reference": "Encounter/B1-05",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/B1-observation-06",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "B1-observation-06",
+        "patientKey": "B1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-B1-observation-06.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/B1-observation-06",
+        "sourceSha256": "f2ce2524f93f5b42b8d746fc7c26c856786ac797ebded8f75024b2dc84abb614",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Skin symptom course (synthetic narrative)",
+        "occurredAt": "2026-02-05T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-02-05T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-06",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-06; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/B1-06",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/B1-06",
+            "reference": "Encounter/B1-06",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/B1-observation-07",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "B1-observation-07",
+        "patientKey": "B1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-B1-observation-07.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/B1-observation-07",
+        "sourceSha256": "840e79ebe08dab358cf902e3a53f2a295510a94b803089c67c2acb6e92a10455",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Skin symptom course (synthetic narrative)",
+        "occurredAt": "2026-06-04T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-06-04T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-07",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-07; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/B1-07",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/B1-07",
+            "reference": "Encounter/B1-07",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Observation/B1-observation-08",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Observation",
+        "resourceId": "B1-observation-08",
+        "patientKey": "B1",
+        "fhirStatus": "final",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Observation-B1-observation-08.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Observation/B1-observation-08",
+        "sourceSha256": "30954fe080ffab0574f52834a76cf9d65694cef935b307e36f7feff6cfb7c435",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "Skin symptom course (synthetic narrative)",
+        "occurredAt": "2026-10-08T00:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-10-08T09:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Observation.effectiveDateTime",
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-08",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-08; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/B1-08",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Organization/hira-72706a77ff081181",
+            "resourceType": "Organization",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Organization-hira-72706a77ff081181.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Observation.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/B1-08",
+            "reference": "Encounter/B1-08",
+            "path": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|CarePlan/B1-careplan-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "CarePlan",
+        "resourceId": "B1-careplan-01",
+        "patientKey": "B1",
+        "fhirStatus": "active",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/CarePlan-B1-careplan-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/CarePlan/B1-careplan-01",
+        "sourceSha256": "795e517bdf2d0f0934f191a0fa65e83928d4a028c3a3a4b642b4b757bafe53b7",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "피부과 후속 계획",
+        "occurredAt": null,
+        "datePrecision": "UNKNOWN",
+        "sourceDateValue": null,
+        "sourceDatePrecision": "UNKNOWN",
+        "dateEvidencePath": null,
+        "specialtyCode": "14",
+        "specialtySource": "DEMO_MAPPING",
+        "specialtyEvidence": {
+          "path": "scenario.visits.B1-08",
+          "sourceValue": "피부과",
+          "mappingVersion": "carecompass-demo-specialty-v1",
+          "description": "scenarios.json:B1.visits:B1-08; clinic source reports matching specialty"
+        },
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Encounter/B1-08",
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "CarePlan.subject"
+          },
+          {
+            "targetResourceKey": "carecompass-demo-v1|Encounter/B1-08",
+            "reference": "Encounter/B1-08",
+            "path": "CarePlan.encounter"
+          }
+        ]
+      },
+      {
+        "schemaVersion": 2,
+        "itemType": "RESOURCE",
+        "resourceKey": "carecompass-demo-v1|Appointment/B1-appointment-01",
+        "sourceSystem": "carecompass-demo-v1",
+        "resourceType": "Appointment",
+        "resourceId": "B1-appointment-01",
+        "patientKey": "B1",
+        "fhirStatus": "cancelled",
+        "ingestionStatus": "READY",
+        "ingestionErrorCode": null,
+        "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Appointment-B1-appointment-01.json",
+        "sourceBundleS3Key": null,
+        "sourceEntryFullUrl": "https://carecompass.example/fhir/Appointment/B1-appointment-01",
+        "sourceSha256": "4ccef3d6c940185b9caf21c5729191c363037489053021b09d67b3ac71272c41",
+        "sourceVersionId": null,
+        "isSynthetic": true,
+        "title": "피부과 예약 취소 후 날짜 미정 계획",
+        "occurredAt": "2026-10-29T01:00:00Z",
+        "datePrecision": "DATETIME",
+        "sourceDateValue": "2026-10-29T10:00:00+09:00",
+        "sourceDatePrecision": "DATETIME",
+        "dateEvidencePath": "Appointment.start",
+        "specialtyCode": "UNKNOWN",
+        "specialtySource": "UNKNOWN",
+        "specialtyEvidence": null,
+        "clinicKey": null,
+        "organizationResourceKey": null,
+        "organizationName": null,
+        "organizationNameSource": "UNKNOWN",
+        "linkedResourceKeys": [
+          "carecompass-demo-v1|Patient/B1"
+        ],
+        "sharedReferences": [
+          {
+            "resourceKey": "carecompass-demo-v1|Location/hira-72706a77ff081181-location",
+            "resourceType": "Location",
+            "s3Key": "carecompass/v1/data/synthetic/fhir/resources/Location-hira-72706a77ff081181-location.json"
+          }
+        ],
+        "unresolvedReferences": [],
+        "linkageStatus": "RESOLVED",
+        "linkEvidence": [
+          {
+            "targetResourceKey": "carecompass-demo-v1|Patient/B1",
+            "reference": "Patient/B1",
+            "path": "Appointment.participant[0].actor"
+          }
+        ]
+      }
+    ],
+    "followups": [
+      {
+        "schemaVersion": 2,
+        "patientKey": "B1",
+        "followupKey": "37165daccd625d765d5e81bec712226b17d035b616f9c4a87d9a163cc235ba4a",
+        "kind": "APPOINTMENT",
+        "title": "피부과 예약 취소 후 날짜 미정 계획",
+        "sourceResourceKey": "carecompass-demo-v1|Appointment/B1-appointment-01",
+        "sourceElementKey": "$",
+        "relatedSourceResourceKeys": [],
+        "sourceStatus": "cancelled",
+        "activityStatus": null,
+        "scheduledAt": "2026-10-29T01:00:00Z",
+        "scheduledDate": null,
+        "datePrecision": "DATETIME",
+        "sourceDatePrecision": "DATETIME",
+        "timingEvidence": {
+          "path": "Appointment.start",
+          "originalValue": "2026-10-29T10:00:00+09:00"
+        },
+        "specialtyCode": "UNKNOWN",
+        "clinicKey": null,
+        "isSynthetic": true
+      },
+      {
+        "schemaVersion": 2,
+        "patientKey": "B1",
+        "followupKey": "ff371b5676755f170bd4911abd0a438691f534c9b542478372d20eadffe933de",
+        "kind": "CARE_PLAN",
+        "title": "피부과 후속 계획",
+        "sourceResourceKey": "carecompass-demo-v1|CarePlan/B1-careplan-01",
+        "sourceElementKey": "$",
+        "relatedSourceResourceKeys": [],
+        "sourceStatus": "active",
+        "activityStatus": "not-started",
+        "scheduledAt": null,
+        "scheduledDate": null,
+        "datePrecision": "UNKNOWN",
+        "sourceDatePrecision": "UNKNOWN",
+        "timingEvidence": null,
+        "specialtyCode": "14",
+        "clinicKey": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxOTYxIzUxIyQxIyQ1IyQ5OSQyNjE0ODEjNzEjJDEjJDgjJDgz",
+        "isSynthetic": true
+      }
+    ]
+  }
+]

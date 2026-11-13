@@ -1,0 +1,1285 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-B1",
+  "type": "collection",
+  "timestamp": "2026-10-30T23:59:59+09:00",
+  "entry": [
+    {
+      "fullUrl": "https://carecompass.example/fhir/Patient/B1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "B1",
+        "identifier": [
+          {
+            "system": "https://carecompass.example/identifier/demo-patient",
+            "value": "B1"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "text": "가상환자 B1"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1991-07-29",
+        "address": [
+          {
+            "city": "춘천",
+            "country": "KR"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Patient. 춘천 거주, 정기 진료형</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/B1-01",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "B1-01",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185347001",
+                "display": "Encounter for problem (procedure)"
+              }
+            ],
+            "text": "피부과 / 아토피 피부염 정기 추적 진료 1회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "period": {
+          "start": "2025-02-06T09:00:00+09:00",
+          "end": "2025-02-06T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-72706a77ff081181",
+          "display": "아름다운피부과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-72706a77ff081181-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/B1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/B1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Encounter. 아토피 피부염 정기 추적 진료 1회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Condition/B1-condition-01",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "B1-condition-01",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "24079001",
+              "display": "Atopic dermatitis (disorder)"
+            }
+          ],
+          "text": "Atopic dermatitis (disorder)"
+        },
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "encounter": {
+          "reference": "Encounter/B1-01"
+        },
+        "onsetDateTime": "2025-02-06T09:00:00+09:00",
+        "recordedDate": "2025-02-06T09:00:00+09:00",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Condition. 아토피 피부염 정기 추적 진료 1회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/B1-observation-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "B1-observation-01",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "https://carecompass.example/CodeSystem/demo-observations",
+              "code": "skin-course",
+              "display": "Skin symptom course (synthetic narrative)"
+            }
+          ],
+          "text": "Skin symptom course (synthetic narrative)"
+        },
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "encounter": {
+          "reference": "Encounter/B1-01"
+        },
+        "effectiveDateTime": "2025-02-06T09:00:00+09:00",
+        "issued": "2025-02-06T09:00:00.642000+09:00",
+        "valueString": "가려움과 건조감 지속",
+        "performer": [
+          {
+            "reference": "Organization/hira-72706a77ff081181"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Observation. 아토피 피부염 정기 추적 진료 1회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/B1-02",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "B1-02",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "피부과 / 아토피 피부염 정기 추적 진료 2회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "period": {
+          "start": "2025-03-06T09:00:00+09:00",
+          "end": "2025-03-06T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-72706a77ff081181",
+          "display": "아름다운피부과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-72706a77ff081181-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/B1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/B1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Encounter. 아토피 피부염 정기 추적 진료 2회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/B1-observation-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "B1-observation-02",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "https://carecompass.example/CodeSystem/demo-observations",
+              "code": "skin-course",
+              "display": "Skin symptom course (synthetic narrative)"
+            }
+          ],
+          "text": "Skin symptom course (synthetic narrative)"
+        },
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "encounter": {
+          "reference": "Encounter/B1-02"
+        },
+        "effectiveDateTime": "2025-03-06T09:00:00+09:00",
+        "issued": "2025-03-06T09:00:00.642000+09:00",
+        "valueString": "이전 방문보다 가려움 감소",
+        "performer": [
+          {
+            "reference": "Organization/hira-72706a77ff081181"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Observation. 아토피 피부염 정기 추적 진료 2회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/B1-03",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "B1-03",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "피부과 / 아토피 피부염 정기 추적 진료 3회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "period": {
+          "start": "2025-05-08T09:00:00+09:00",
+          "end": "2025-05-08T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-72706a77ff081181",
+          "display": "아름다운피부과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-72706a77ff081181-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/B1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/B1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Encounter. 아토피 피부염 정기 추적 진료 3회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/B1-observation-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "B1-observation-03",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "https://carecompass.example/CodeSystem/demo-observations",
+              "code": "skin-course",
+              "display": "Skin symptom course (synthetic narrative)"
+            }
+          ],
+          "text": "Skin symptom course (synthetic narrative)"
+        },
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "encounter": {
+          "reference": "Encounter/B1-03"
+        },
+        "effectiveDateTime": "2025-05-08T09:00:00+09:00",
+        "issued": "2025-05-08T09:00:00.642000+09:00",
+        "valueString": "증상 완화 상태 유지",
+        "performer": [
+          {
+            "reference": "Organization/hira-72706a77ff081181"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Observation. 아토피 피부염 정기 추적 진료 3회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/B1-04",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "B1-04",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "피부과 / 아토피 피부염 정기 추적 진료 4회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "period": {
+          "start": "2025-08-07T09:00:00+09:00",
+          "end": "2025-08-07T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-72706a77ff081181",
+          "display": "아름다운피부과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-72706a77ff081181-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/B1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/B1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Encounter. 아토피 피부염 정기 추적 진료 4회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/B1-observation-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "B1-observation-04",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "https://carecompass.example/CodeSystem/demo-observations",
+              "code": "skin-course",
+              "display": "Skin symptom course (synthetic narrative)"
+            }
+          ],
+          "text": "Skin symptom course (synthetic narrative)"
+        },
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "encounter": {
+          "reference": "Encounter/B1-04"
+        },
+        "effectiveDateTime": "2025-08-07T09:00:00+09:00",
+        "issued": "2025-08-07T09:00:00.642000+09:00",
+        "valueString": "피부 건조감 증가",
+        "performer": [
+          {
+            "reference": "Organization/hira-72706a77ff081181"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Observation. 아토피 피부염 정기 추적 진료 4회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/B1-05",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "B1-05",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "피부과 / 아토피 피부염 정기 추적 진료 5회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "period": {
+          "start": "2025-11-06T09:00:00+09:00",
+          "end": "2025-11-06T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-72706a77ff081181",
+          "display": "아름다운피부과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-72706a77ff081181-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/B1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/B1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Encounter. 아토피 피부염 정기 추적 진료 5회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/B1-observation-05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "B1-observation-05",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "https://carecompass.example/CodeSystem/demo-observations",
+              "code": "skin-course",
+              "display": "Skin symptom course (synthetic narrative)"
+            }
+          ],
+          "text": "Skin symptom course (synthetic narrative)"
+        },
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "encounter": {
+          "reference": "Encounter/B1-05"
+        },
+        "effectiveDateTime": "2025-11-06T09:00:00+09:00",
+        "issued": "2025-11-06T09:00:00.642000+09:00",
+        "valueString": "증상 완화",
+        "performer": [
+          {
+            "reference": "Organization/hira-72706a77ff081181"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Observation. 아토피 피부염 정기 추적 진료 5회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/B1-06",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "B1-06",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "피부과 / 아토피 피부염 정기 추적 진료 6회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "period": {
+          "start": "2026-02-05T09:00:00+09:00",
+          "end": "2026-02-05T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-72706a77ff081181",
+          "display": "아름다운피부과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-72706a77ff081181-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/B1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/B1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Encounter. 아토피 피부염 정기 추적 진료 6회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/B1-observation-06",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "B1-observation-06",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "https://carecompass.example/CodeSystem/demo-observations",
+              "code": "skin-course",
+              "display": "Skin symptom course (synthetic narrative)"
+            }
+          ],
+          "text": "Skin symptom course (synthetic narrative)"
+        },
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "encounter": {
+          "reference": "Encounter/B1-06"
+        },
+        "effectiveDateTime": "2026-02-05T09:00:00+09:00",
+        "issued": "2026-02-05T09:00:00.642000+09:00",
+        "valueString": "경미한 가려움 재발",
+        "performer": [
+          {
+            "reference": "Organization/hira-72706a77ff081181"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Observation. 아토피 피부염 정기 추적 진료 6회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/B1-07",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "B1-07",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "피부과 / 아토피 피부염 정기 추적 진료 7회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "period": {
+          "start": "2026-06-04T09:00:00+09:00",
+          "end": "2026-06-04T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-72706a77ff081181",
+          "display": "아름다운피부과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-72706a77ff081181-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/B1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/B1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Encounter. 아토피 피부염 정기 추적 진료 7회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/B1-observation-07",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "B1-observation-07",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "https://carecompass.example/CodeSystem/demo-observations",
+              "code": "skin-course",
+              "display": "Skin symptom course (synthetic narrative)"
+            }
+          ],
+          "text": "Skin symptom course (synthetic narrative)"
+        },
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "encounter": {
+          "reference": "Encounter/B1-07"
+        },
+        "effectiveDateTime": "2026-06-04T09:00:00+09:00",
+        "issued": "2026-06-04T09:00:00.642000+09:00",
+        "valueString": "이전 방문보다 호전",
+        "performer": [
+          {
+            "reference": "Organization/hira-72706a77ff081181"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Observation. 아토피 피부염 정기 추적 진료 7회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Encounter/B1-08",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "B1-08",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up (procedure)"
+              }
+            ],
+            "text": "피부과 / 아토피 피부염 정기 추적 진료 8회차"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "period": {
+          "start": "2026-10-08T09:00:00+09:00",
+          "end": "2026-10-08T09:15:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/hira-72706a77ff081181",
+          "display": "아름다운피부과의원"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/hira-72706a77ff081181-location"
+            },
+            "status": "completed"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/B1-condition-01"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/B1-condition-01"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Encounter. 아토피 피부염 정기 추적 진료 8회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Observation/B1-observation-08",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "B1-observation-08",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "https://carecompass.example/CodeSystem/demo-observations",
+              "code": "skin-course",
+              "display": "Skin symptom course (synthetic narrative)"
+            }
+          ],
+          "text": "Skin symptom course (synthetic narrative)"
+        },
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "encounter": {
+          "reference": "Encounter/B1-08"
+        },
+        "effectiveDateTime": "2026-10-08T09:00:00+09:00",
+        "issued": "2026-10-08T09:00:00.642000+09:00",
+        "valueString": "증상 안정",
+        "performer": [
+          {
+            "reference": "Organization/hira-72706a77ff081181"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. B1, Observation. 아토피 피부염 정기 추적 진료 8회차</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Organization/hira-72706a77ff081181",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "hira-72706a77ff081181",
+        "identifier": [
+          {
+            "system": "https://carecompass.example/identifier/hira-clinic-key",
+            "value": "hira|JDQ4MTYyMiM1MSMkMiMkNCMkMDAkMzgxOTYxIzUxIyQxIyQ1IyQ5OSQyNjE0ODEjNzEjJDEjJDgjJDgz"
+          }
+        ],
+        "name": "아름다운피부과의원",
+        "address": [
+          {
+            "text": "강원특별자치도 춘천시 금강로 67-1, 4층 (조양동)",
+            "postalCode": "24352",
+            "country": "KR"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "033-242-7975",
+            "use": "work"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">아름다운피부과의원; 강원특별자치도 춘천시 금강로 67-1, 4층 (조양동); 제공된 HIRA 병원 데이터에서 변환. 이 기관과 합성 환자의 진료 연결은 가상이며 실제 진료·예약을 의미하지 않음.</div>"
+        },
+        "meta": {
+          "source": "https://www.data.go.kr/data/15051059/fileData.do"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Location/hira-72706a77ff081181-location",
+      "resource": {
+        "resourceType": "Location",
+        "id": "hira-72706a77ff081181-location",
+        "name": "아름다운피부과의원",
+        "address": {
+          "text": "강원특별자치도 춘천시 금강로 67-1, 4층 (조양동)",
+          "postalCode": "24352",
+          "country": "KR"
+        },
+        "managingOrganization": {
+          "reference": "Organization/hira-72706a77ff081181"
+        },
+        "position": {
+          "longitude": 127.729191,
+          "latitude": 37.879341
+        },
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "033-242-7975",
+            "use": "work"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">아름다운피부과의원; 강원특별자치도 춘천시 금강로 67-1, 4층 (조양동); 제공된 HIRA 병원 데이터에서 변환. 이 기관과 합성 환자의 진료 연결은 가상이며 실제 진료·예약을 의미하지 않음.</div>"
+        },
+        "meta": {
+          "source": "https://www.data.go.kr/data/15051059/fileData.do"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/CodeSystem/demo-observations",
+      "resource": {
+        "resourceType": "CodeSystem",
+        "id": "demo-observations",
+        "url": "https://carecompass.example/CodeSystem/demo-observations",
+        "version": "1.0.0",
+        "name": "CareCompassDemoObservations",
+        "status": "active",
+        "experimental": true,
+        "description": "Project-defined synthetic symptom narrative code; not a LOINC or SNOMED code.",
+        "caseSensitive": true,
+        "content": "complete",
+        "count": 1,
+        "concept": [
+          {
+            "code": "skin-course",
+            "display": "Skin symptom course (synthetic narrative)",
+            "definition": "Authored synthetic narrative about skin symptom course at an encounter."
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. 합성 피부 증상 경과 기록을 위한 프로젝트 코드 정의. LOINC 또는 SNOMED CT 코드가 아님.</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/Appointment/B1-appointment-01",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "B1-appointment-01",
+        "status": "cancelled",
+        "description": "피부과 예약 취소 후 날짜 미정 계획",
+        "specialty": [
+          {
+            "text": "피부과"
+          }
+        ],
+        "start": "2026-10-29T10:00:00+09:00",
+        "end": "2026-10-29T10:20:00+09:00",
+        "participant": [
+          {
+            "actor": {
+              "reference": "Patient/B1"
+            },
+            "status": "declined"
+          },
+          {
+            "actor": {
+              "reference": "Location/hira-72706a77ff081181-location"
+            },
+            "status": "declined"
+          }
+        ],
+        "cancelationReason": {
+          "text": "합성 시나리오: 일정 변경으로 취소"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. 피부과 예약 취소 후 날짜 미정 계획; 실제 예약이 아님.</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://carecompass.example/fhir/CarePlan/B1-careplan-01",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "B1-careplan-01",
+        "status": "active",
+        "intent": "plan",
+        "title": "피부과 후속 계획",
+        "subject": {
+          "reference": "Patient/B1"
+        },
+        "encounter": {
+          "reference": "Encounter/B1-08"
+        },
+        "description": "정기 추적 진료를 위한 합성 후속 계획.",
+        "activity": [
+          {
+            "detail": {
+              "kind": "Appointment",
+              "status": "not-started",
+              "description": "피부과 재방문 계획. 다음 날짜는 아직 정하지 않음."
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">합성 시연 데이터. 피부과 후속 계획 — 날짜 미정</div>"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
